@@ -42,23 +42,6 @@ public class PokemonController{
         return pokemon.getName() + " was added successfully to " +  pokeRegion.getName() + " region!";
     }
 
-    @PutMapping("/update/region")
-    public @ResponseBody String updatePokemonRegion(@RequestBody PokemonDto pokemonDto){
-        PokemonRegion pokeRegion = null;
-        if(pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()){
-            pokeRegion = pokemonRegionRepository.findPokemonRegionByName((pokemonDto.getRegionName()));
-        } else if(pokemonDto.getRegionName() != null){
-            pokeRegion = pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
-        }
-        if(pokeRegion == null){
-            return "Invalid Region!";
-        }
-        var pokemon = pokemonRepository.findPokemonByName(pokemonDto.getName());
-        pokemon.setRegion(pokeRegion);
-        pokemonRepository.save(pokemon);
-        return pokemon.getName() + "'s region was successfully updated to " +  pokeRegion.getName() + " region!";
-    }
-
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto) {
         try {
