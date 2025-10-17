@@ -8,8 +8,10 @@ import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Optional;
-
+/**
+ * The controller is essentially a way to call your Rest APIs to
+ * Add, Update, Read, & Delete objects within the Pokemon database
+ **/
 @Controller
 @RequestMapping("/pokemon")
 public class PokemonController{

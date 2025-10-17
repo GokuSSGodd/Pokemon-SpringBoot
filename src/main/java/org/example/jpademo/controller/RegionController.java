@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * The controller is essentially a way to call your Rest APIs to
+ * Add, Update, Read, & Delete objects within the Pokemon Region database
+ **/
 @Controller
 @RequestMapping("/region")
 public class RegionController {

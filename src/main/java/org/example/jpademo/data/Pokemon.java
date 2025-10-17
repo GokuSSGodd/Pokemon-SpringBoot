@@ -4,8 +4,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-
+/**
+ * An entity/object created to be used within the database.
+ * This stores the Pokemon itself along with its attributes:
+ * id, name, level, ability, and region.
+ **/
 @Entity
 @Getter @Setter
 public class Pokemon {
