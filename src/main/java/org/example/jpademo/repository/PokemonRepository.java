@@ -3,6 +3,8 @@ package org.example.jpademo.repository;
 import org.example.jpademo.data.Pokemon;
 import org.springframework.data.repository.CrudRepository;
 import java.util.List;
+import java.util.Optional;
+
 /**
  * This is the Crud(Create, Read, Update, Delete) Repository for the Pokemon themselves.
  * It has built-in functions that allow you to easily manipulate the database.
@@ -12,5 +14,5 @@ import java.util.List;
  **/
 public interface PokemonRepository extends CrudRepository<Pokemon, Integer> {
     List<Pokemon> findPokemonByAbilityEqualsIgnoreCase(String ability);
-    Pokemon findPokemonByName(String name);
+    Optional<Pokemon> findPokemonByName(String name);
 }

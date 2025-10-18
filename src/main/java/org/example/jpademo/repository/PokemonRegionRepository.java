@@ -2,6 +2,7 @@ package org.example.jpademo.repository;
 
 import org.example.jpademo.data.PokemonRegion;
 import org.springframework.data.repository.CrudRepository;
+import java.util.Optional;
 
 /**
  * This is the Crud(Create, Read, Update, Delete) Repository for the Pokemon Region.
@@ -11,6 +12,6 @@ import org.springframework.data.repository.CrudRepository;
  * as a reference anywhere, also called dependency injection. A singleton at the moment.
  **/
 public interface PokemonRegionRepository extends CrudRepository<PokemonRegion,Integer> {
-    PokemonRegion findPokemonRegionById(Integer id);
-    PokemonRegion findPokemonRegionByName(String name);
+    Optional<PokemonRegion> findPokemonRegionById(Integer id);
+    Optional<PokemonRegion> findPokemonRegionByName(String name);
 }

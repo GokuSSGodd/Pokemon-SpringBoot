@@ -2,9 +2,8 @@ package org.example.jpademo.controller;
 
 import org.example.jpademo.Dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
-import org.example.jpademo.data.PokemonRegion;
-import org.example.jpademo.repository.PokemonRegionRepository;
-import org.example.jpademo.repository.PokemonRepository;
+import org.example.jpademo.service.PokemonRegionService;
+import org.example.jpademo.service.PokemonService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,39 +15,25 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/pokemon")
 public class PokemonController{
 
-    private final PokemonRepository pokemonRepository;
-    private final PokemonRegionRepository pokemonRegionRepository;
+    private final PokemonRegionService pokemonRegionService;
+    private final PokemonService pokemonService;
 
-    public PokemonController(PokemonRepository pokemonRepository, PokemonRegionRepository pokemonRegionRepository) {
-        this.pokemonRepository = pokemonRepository;
-        this.pokemonRegionRepository = pokemonRegionRepository;
+    public PokemonController(PokemonRegionService pokemonRegionService, PokemonService pokemonService) {
+        this.pokemonRegionService = pokemonRegionService;
+        this.pokemonService = pokemonService;
     }
 
     @PostMapping("/add")
     public @ResponseBody String addNewPokemon(@RequestBody PokemonDto pokemonDto){
-        PokemonRegion pokeRegion = null;
-        if(pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()){
-            pokeRegion = pokemonRegionRepository.findPokemonRegionByName((pokemonDto.getRegionName()));
-        } else if(pokemonDto.getRegionName() != null){
-            pokeRegion = pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
-        }
-        if(pokeRegion == null){
-            return "Invalid Region!";
-        }
-        Pokemon pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.getName());
-        pokemon.setAbility(pokemonDto.getAbility());
-        pokemon.setLevel(pokemonDto.getLevel());
-        pokemon.setRegion(pokeRegion);
-        pokemonRepository.save(pokemon);
-        return pokemon.getName() + " was added successfully to " +  pokeRegion.getName() + " region!";
+        var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
+        Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokeRegion);
+        pokemonService.savePokemon(pokemon);
+        return pokemon.getName() + " was added successfully to " + pokeRegion.get().getName() + " region!";
     }
 
     @PutMapping("/update")
     public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto) {
-        try {
-            PokemonRegion pokeRegion = null;
-            var pokemon = pokemonRepository.findPokemonByName((pokemonDto.getName()));
+            var pokemon = pokemonService.findPokemonByNameFromDto(pokemonDto);
             if(pokemon == null){
                 return "Invalid Pokemon!";
             }
@@ -68,15 +53,13 @@ public class PokemonController{
             }
             pokemonRepository.save(pokemon);
             return pokemon.getName() + " was successfully updated!";
-        } catch (Exception e) {
-            return "Invalid Input";
-        }
     }
 
+/*
     @DeleteMapping("/delete")
     public @ResponseBody String deletePokemon(@RequestBody Pokemon pokemon){
         pokemonRepository.delete(pokemon);
         return pokemon.getName() + " was deleted successfully";
-    }
+    }*/
 
 }
