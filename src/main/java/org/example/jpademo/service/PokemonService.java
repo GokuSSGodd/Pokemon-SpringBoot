@@ -39,4 +39,18 @@ public class PokemonService {
        return pokemon.orElseThrow(()-> new PokemonException(pokemonName));
     }
 
+    public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokeRegion) {
+        if (pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()) {
+            pokemon.setAbility(pokemonDto.getAbility());
+        }
+        if (pokemonDto.getLevel() != null && pokemonDto.getLevel() > 0) {
+            pokemon.setLevel(pokemonDto.getLevel());
+        }
+        pokeRegion.ifPresent(pokemon::setRegion);
+    }
+
+    public void deletePokemon(Pokemon pokemon){
+        pokemonRepository.delete(pokemon);
+    }
+
 }

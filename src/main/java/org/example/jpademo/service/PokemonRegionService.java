@@ -5,7 +5,6 @@ import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRegionRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.Optional;
 
 @Service
