@@ -2,7 +2,6 @@ package org.example.jpademo.repository;
 
 import org.example.jpademo.data.Pokemon;
 import org.springframework.data.repository.CrudRepository;
-import java.util.List;
 import java.util.Optional;
 
 /**
@@ -13,6 +12,5 @@ import java.util.Optional;
  * as a reference anywhere, also called dependency injection. A singleton at the moment.
  **/
 public interface PokemonRepository extends CrudRepository<Pokemon, Integer> {
-    List<Pokemon> findPokemonByAbilityEqualsIgnoreCase(String ability);
     Optional<Pokemon> findPokemonByName(String name);
 }

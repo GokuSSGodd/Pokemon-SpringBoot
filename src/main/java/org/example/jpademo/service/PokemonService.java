@@ -49,8 +49,8 @@ public class PokemonService {
         pokeRegion.ifPresent(pokemon::setRegion);
     }
 
-    public void deletePokemon(Pokemon pokemon){
-        pokemonRepository.delete(pokemon);
+    public Optional<Pokemon> findPokemonByName(String name){
+       return pokemonRepository.findPokemonByName(name);
     }
 
 }
