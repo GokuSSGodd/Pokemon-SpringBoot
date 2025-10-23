@@ -1,5 +1,6 @@
 package org.example.jpademo.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.jpademo.Dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
@@ -10,16 +11,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 /**
  * The controller is essentially a way to call your Rest APIs to
  * Add, Update, Read, & Delete objects within the Pokemon database
  **/
+@Slf4j
 @Controller
 @RequestMapping("/pokemon")
 public class PokemonController{
-    Logger log = LoggerFactory.getLogger(PokemonController.class);
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
 
@@ -33,7 +32,6 @@ public class PokemonController{
         var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokeRegion);
         pokemonService.savePokemon(pokemon);
-        log.info("Pokemon Added Successfully");
         return pokemon.getName() + " was added successfully to " + pokeRegion.get().getName() + " region!";
     }
 
@@ -50,6 +48,7 @@ public class PokemonController{
     public @ResponseBody Pokemon getPokemon(@RequestParam String name){
         var pokemonOptional = pokemonService.findPokemonByName(name);
         var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+        log.info("Pokemon received Successfully");
         return pokemon;
     }
 
