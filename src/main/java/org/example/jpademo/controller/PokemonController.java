@@ -6,8 +6,6 @@ import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.example.jpademo.service.PokemonService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class PokemonController{
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
+
 
     public PokemonController(PokemonRegionService pokemonRegionService, PokemonService pokemonService) {
         this.pokemonRegionService = pokemonRegionService;
