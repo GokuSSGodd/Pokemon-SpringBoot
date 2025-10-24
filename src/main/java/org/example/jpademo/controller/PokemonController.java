@@ -1,7 +1,7 @@
 package org.example.jpademo.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.jpademo.Dto.PokemonDto;
+import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
 import org.example.jpademo.service.PokemonRegionService;
@@ -37,7 +37,8 @@ public class PokemonController{
 
     @PutMapping("/update")
     public String updatePokemon(@RequestBody PokemonDto pokemonDto) {
-            var pokemon = pokemonService.findPokemonByNameFromDto(pokemonDto);
+            var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.getName());
+            var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
             var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
             pokemonService.updatePokemon(pokemonDto,pokemon,pokeRegion);
             pokemonService.savePokemon(pokemon);

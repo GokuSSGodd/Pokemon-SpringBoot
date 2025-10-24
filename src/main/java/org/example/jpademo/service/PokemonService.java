@@ -1,6 +1,6 @@
 package org.example.jpademo.service;
 
-import org.example.jpademo.Dto.PokemonDto;
+import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.exception.PokemonException;
@@ -38,12 +38,6 @@ public class PokemonService {
 
     public void savePokemon(Pokemon pokemon){
         pokemonRepository.save(pokemon);
-    }
-
-    public Pokemon findPokemonByNameFromDto(PokemonDto pokemonDto){
-       var pokemonName = pokemonDto.getName();
-       var pokemon = pokemonRepository.findPokemonByName(pokemonName);
-       return pokemon.orElseThrow(()-> new PokemonException(pokemonName));
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokeRegion) {

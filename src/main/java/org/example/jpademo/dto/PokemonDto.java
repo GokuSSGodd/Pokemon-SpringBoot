@@ -1,7 +1,10 @@
-package org.example.jpademo.Dto;
+package org.example.jpademo.dto;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.example.jpademo.data.PokemonType;
+
+import java.util.List;
 
 /**
  * Dto is a way to be able to retrieve information from the database in order to update
@@ -15,6 +18,7 @@ public class PokemonDto {
     private String name;
     private Integer level;
     private String ability;
+    private List<PokemonType> pokemonTypeList;
     private String regionName;
     private Integer regionId;
 }

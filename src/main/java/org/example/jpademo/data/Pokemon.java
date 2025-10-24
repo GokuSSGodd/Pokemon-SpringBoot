@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 /**
  * An entity/object created to be used within the database.
  * This stores the Pokemon itself along with its attributes:
@@ -18,6 +20,9 @@ public class Pokemon {
     private String name;
     private Integer level;
     private String ability;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type")
+    private List<PokemonType> pokemonTypeList;
     @ManyToOne
     private PokemonRegion region;
 }

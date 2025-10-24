@@ -1,6 +1,6 @@
 package org.example.jpademo.service;
 
-import org.example.jpademo.Dto.PokemonDto;
+import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRegionRepository;
