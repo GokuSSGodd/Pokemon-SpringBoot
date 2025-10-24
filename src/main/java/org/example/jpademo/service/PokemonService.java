@@ -9,6 +9,13 @@ import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 
+/**
+ * The Service is just another layer that goes between the repository & the controller
+ * It allows you to manipulate the database without directly using the controller itself
+ * Which adds another layer of security to the application
+ * This PokemonService helps the PokemonController manipulate the PokemonRepository
+ * through the service itself, it can also be used with other controllers
+ **/
 @Service
 public class PokemonService {
     private final PokemonRepository pokemonRepository;
