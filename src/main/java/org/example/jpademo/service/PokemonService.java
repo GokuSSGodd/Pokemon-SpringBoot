@@ -40,18 +40,25 @@ public class PokemonService {
         pokemonRepository.save(pokemon);
     }
 
-    public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokeRegion) {
+    public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegionOptional) {
         if (pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()) {
             pokemon.setAbility(pokemonDto.getAbility());
         }
         if (pokemonDto.getLevel() != null && pokemonDto.getLevel() > 0) {
             pokemon.setLevel(pokemonDto.getLevel());
         }
-        pokeRegion.ifPresent(pokemon::setRegion);
+        if (pokemonDto.getPokemonTypeList() != null && !pokemonDto.getPokemonTypeList().isEmpty()) {
+            pokemon.setPokemonTypeList(pokemonDto.getPokemonTypeList());
+        }
+        pokemonRegionOptional.ifPresent(pokemon::setRegion);
     }
 
     public Optional<Pokemon> findPokemonByName(String name){
        return pokemonRepository.findPokemonByName(name);
+    }
+
+    public void deletePokemonByName(Pokemon pokemon){
+        pokemonRepository.delete(pokemon);
     }
 
 }

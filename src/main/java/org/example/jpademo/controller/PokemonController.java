@@ -53,5 +53,14 @@ public class PokemonController{
         return pokemon;
     }
 
+    @DeleteMapping("/delete")
+    public String deletePokemon(@RequestParam String name){
+       var pokemonOptional = pokemonService.findPokemonByName(name);
+       var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+       pokemonService.deletePokemonByName(pokemon);
+       return pokemon.getName() + " was successfully deleted!";
+    }
+
+
 
 }

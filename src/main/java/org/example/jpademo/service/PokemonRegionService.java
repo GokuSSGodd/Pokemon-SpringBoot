@@ -27,7 +27,6 @@ public class PokemonRegionService {
         } else if(pokemonDto.getRegionName() != null) {
            return pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
         }
-         throw new PokemonRegionException(null);
+         return Optional.empty();
     }
-
 }
