@@ -6,15 +6,16 @@ import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.example.jpademo.service.PokemonService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * The controller is essentially a way to call your Rest APIs to
+ * The RestController is essentially a way to call your Rest APIs to
  * Add, Update, Read, & Delete objects within the Pokemon database
+ * RestController = Controller + ResponseBody
+ * It is designed for RESTful web services & API development
  **/
 @Slf4j
-@Controller
+@RestController
 @RequestMapping("/pokemon")
 public class PokemonController{
     private final PokemonRegionService pokemonRegionService;
@@ -27,7 +28,7 @@ public class PokemonController{
     }
 
     @PostMapping("/add")
-    public @ResponseBody String addNewPokemon(@RequestBody PokemonDto pokemonDto){
+    public String addNewPokemon(@RequestBody PokemonDto pokemonDto){
         var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
         Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokeRegion);
         pokemonService.savePokemon(pokemon);
@@ -35,7 +36,7 @@ public class PokemonController{
     }
 
     @PutMapping("/update")
-    public @ResponseBody String updatePokemon(@RequestBody PokemonDto pokemonDto) {
+    public String updatePokemon(@RequestBody PokemonDto pokemonDto) {
             var pokemon = pokemonService.findPokemonByNameFromDto(pokemonDto);
             var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
             pokemonService.updatePokemon(pokemonDto,pokemon,pokeRegion);
@@ -44,7 +45,7 @@ public class PokemonController{
     }
 
     @GetMapping("/get")
-    public @ResponseBody Pokemon getPokemon(@RequestParam String name){
+    public Pokemon getPokemon(@RequestParam String name){
         var pokemonOptional = pokemonService.findPokemonByName(name);
         var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
         log.info("Pokemon received Successfully");
