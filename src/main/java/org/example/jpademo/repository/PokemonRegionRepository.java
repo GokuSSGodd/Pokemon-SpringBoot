@@ -12,7 +12,6 @@ import java.util.Optional;
  * as a reference anywhere, also called dependency injection. A singleton at the moment.
  **/
 public interface PokemonRegionRepository extends CrudRepository<PokemonRegion,Integer> {
-    Optional<PokemonRegion> findPokemonRegionById(Integer id);
     Optional<PokemonRegion> findPokemonRegionByName(String name);
 
 }
