@@ -26,12 +26,12 @@ public class PokemonService {
 
     public Pokemon createPokemon(PokemonDto pokemonDto, Optional<PokemonRegion> pokemonRegion) {
         var pokeRegion = pokemonRegion.orElseThrow(()->
-                new PokemonRegionException(pokemonDto.getRegionName())
+                new PokemonRegionException(pokemonDto.regionName())
         );
         var pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.getName());
-        pokemon.setAbility(pokemonDto.getAbility());
-        pokemon.setLevel(pokemonDto.getLevel());
+        pokemon.setName(pokemonDto.name());
+        pokemon.setAbility(pokemonDto.ability());
+        pokemon.setLevel(pokemonDto.level());
         pokemon.setRegion(pokeRegion);
         return pokemon;
     }
@@ -41,14 +41,14 @@ public class PokemonService {
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegionOptional) {
-        if (pokemonDto.getAbility() != null && !pokemonDto.getAbility().isEmpty()) {
-            pokemon.setAbility(pokemonDto.getAbility());
+        if (pokemonDto.ability() != null && !pokemonDto.ability().isEmpty()) {
+            pokemon.setAbility(pokemonDto.ability());
         }
-        if (pokemonDto.getLevel() != null && pokemonDto.getLevel() > 0) {
-            pokemon.setLevel(pokemonDto.getLevel());
+        if (pokemonDto.level() != null && pokemonDto.level() > 0) {
+            pokemon.setLevel(pokemonDto.level());
         }
-        if (pokemonDto.getPokemonTypeList() != null && !pokemonDto.getPokemonTypeList().isEmpty()) {
-            pokemon.setPokemonTypeList(pokemonDto.getPokemonTypeList());
+        if (pokemonDto.pokemonTypeList() != null && !pokemonDto.pokemonTypeList().isEmpty()) {
+            pokemon.setPokemonTypeList(pokemonDto.pokemonTypeList());
         }
         pokemonRegionOptional.ifPresent(pokemon::setRegion);
     }

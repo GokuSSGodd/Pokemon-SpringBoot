@@ -14,4 +14,5 @@ import java.util.Optional;
 public interface PokemonRegionRepository extends CrudRepository<PokemonRegion,Integer> {
     Optional<PokemonRegion> findPokemonRegionById(Integer id);
     Optional<PokemonRegion> findPokemonRegionByName(String name);
+
 }

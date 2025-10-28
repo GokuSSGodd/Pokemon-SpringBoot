@@ -21,7 +21,6 @@ public class PokemonController{
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
 
-
     public PokemonController(PokemonRegionService pokemonRegionService, PokemonService pokemonService) {
         this.pokemonRegionService = pokemonRegionService;
         this.pokemonService = pokemonService;
@@ -37,10 +36,10 @@ public class PokemonController{
 
     @PutMapping("/update")
     public String updatePokemon(@RequestBody PokemonDto pokemonDto) {
-            var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.getName());
+            var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
             var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
-            var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
-            pokemonService.updatePokemon(pokemonDto,pokemon,pokeRegion);
+            var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
+            pokemonService.updatePokemon(pokemonDto,pokemon,pokemonRegionOptional);
             pokemonService.savePokemon(pokemon);
             return pokemon.getName() + " was successfully updated!";
     }

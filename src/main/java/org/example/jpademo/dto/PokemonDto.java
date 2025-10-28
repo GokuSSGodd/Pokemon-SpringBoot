@@ -1,9 +1,6 @@
 package org.example.jpademo.dto;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.example.jpademo.data.PokemonType;
-
 import java.util.List;
 
 /**
@@ -11,14 +8,13 @@ import java.util.List;
  * an object within the database as they relate to the Pokemon & its Region.
  * If you wanted to update a Pokemon object by retrieving certain information pertaining
  * to the Pokemon using its region you would do that with this
+ * Also adds a layer of security to the application
  **/
-@Getter @Setter
-public class PokemonDto {
-    private Integer id;
-    private String name;
-    private Integer level;
-    private String ability;
-    private List<PokemonType> pokemonTypeList;
-    private String regionName;
-    private Integer regionId;
-}
+public record PokemonDto (
+        String name,
+        Integer level,
+        String ability,
+        List<PokemonType> pokemonTypeList,
+        String regionName,
+        Integer regionId
+) {}

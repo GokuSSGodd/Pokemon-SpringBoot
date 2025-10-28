@@ -1,0 +1,9 @@
+openapi: 3.1.0
+info:
+  title: Pokemon Region API
+  description: Pokemon Region API allows you to manipulate data from the Pokemon Region
+  version: 1.0.0
+  contact:
+    name: Murtaza Amjad
+    email: murtazaamjad0519@gmail.com
+    url: https://murtaza-amjad-personal-website.vercel.app/

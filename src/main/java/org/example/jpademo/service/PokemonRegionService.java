@@ -1,9 +1,11 @@
 package org.example.jpademo.service;
 
+import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.PokemonRegion;
-import org.example.jpademo.exception.PokemonRegionException;
+import org.example.jpademo.dto.PokemonRegionDto;
 import org.example.jpademo.repository.PokemonRegionRepository;
+import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 import java.util.Optional;
 
@@ -17,16 +19,40 @@ import java.util.Optional;
 @Service
 public class PokemonRegionService {
     private final PokemonRegionRepository pokemonRegionRepository;
-    public PokemonRegionService(PokemonRegionRepository pokemonRegionRepository) {
+    private final PokemonRepository pokemonRepository;
+
+    public PokemonRegionService(PokemonRegionRepository pokemonRegionRepository, PokemonRepository pokemonRepository) {
         this.pokemonRegionRepository = pokemonRegionRepository;
+        this.pokemonRepository = pokemonRepository;
+    }
+
+    public PokemonRegion createNewPokemonRegion(PokemonRegionDto pokemonRegionDto){
+        var pokemonRegion = new PokemonRegion();
+        pokemonRegion.setName(pokemonRegionDto.regionName());
+        pokemonRegion.setPopulation(pokemonRegionDto.population());
+        return pokemonRegion;
+    }
+
+    public void savePokemonRegion(PokemonRegion pokemonRegion){
+        pokemonRegionRepository.save(pokemonRegion);
     }
 
     public Optional<PokemonRegion> getPokemonRegionByDto(PokemonDto pokemonDto){
-        if(pokemonDto.getRegionName() != null && !pokemonDto.getRegionName().isEmpty()){
-           return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.getRegionName());
-        } else if(pokemonDto.getRegionName() != null) {
-           return pokemonRegionRepository.findPokemonRegionById(pokemonDto.getRegionId());
+        if(pokemonDto.regionName() != null && !pokemonDto.regionName().isEmpty()){
+           return pokemonRegionRepository.findPokemonRegionByName(pokemonDto.regionName());
+        } else if(pokemonDto.regionId() != null) {
+           return pokemonRegionRepository.findPokemonRegionById(pokemonDto.regionId());
         }
          return Optional.empty();
     }
+
+    public Optional<PokemonRegion> getPokemonRegion(String name){
+        return pokemonRegionRepository.findPokemonRegionByName(name);
+    }
+
+    public void deletePokemonRegion(PokemonRegion pokemonRegion){
+        pokemonRegionRepository.delete(pokemonRegion);
+    }
+
+
 }
