@@ -9,9 +9,7 @@ import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * The Service is just another layer that goes between the repository & the controller
@@ -61,86 +59,100 @@ public class PokemonService {
     }
 
     public void setPokemonWeakness(PokemonDto pokemonDto, Pokemon pokemon){
+        List<PokemonWeakness> pokemonWeaknessListArray = new ArrayList<>();
         if (pokemonDto.pokemonTypeList().contains(PokemonType.BUG)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FIRE, PokemonWeakness.FLYING, PokemonWeakness.ROCK);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+            pokemonWeaknessListArray.add(PokemonWeakness.FIRE);
+            pokemonWeaknessListArray.add(PokemonWeakness.FLYING);
+            pokemonWeaknessListArray.add(PokemonWeakness.ROCK);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.DARK)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FIGHTING, PokemonWeakness.BUG, PokemonWeakness.FAIRY);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.DARK)){
+            pokemonWeaknessListArray.add(PokemonWeakness.FIGHTING);
+            pokemonWeaknessListArray.add(PokemonWeakness.BUG);
+            pokemonWeaknessListArray.add(PokemonWeakness.FAIRY);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.DRAGON)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.ICE, PokemonWeakness.DRAGON, PokemonWeakness.FAIRY);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.DRAGON)){
+            pokemonWeaknessListArray.add(PokemonWeakness.ICE);
+            pokemonWeaknessListArray.add(PokemonWeakness.DRAGON);
+            pokemonWeaknessListArray.add(PokemonWeakness.FAIRY);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.ELECTRIC)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.GROUND);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.ELECTRIC)){
+            pokemonWeaknessListArray.add(PokemonWeakness.GROUND);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.FAIRY)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.POISON, PokemonWeakness.STEEL);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FAIRY)){
+            pokemonWeaknessListArray.add(PokemonWeakness.POISON);
+            pokemonWeaknessListArray.add(PokemonWeakness.STEEL);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.FIGHTING)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FLYING, PokemonWeakness.PSYCHIC, PokemonWeakness.FAIRY);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FIGHTING)){
+            pokemonWeaknessListArray.add(PokemonWeakness.PSYCHIC);
+            pokemonWeaknessListArray.add(PokemonWeakness.FLYING);
+            pokemonWeaknessListArray.add(PokemonWeakness.FAIRY);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.GHOST)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.GHOST, PokemonWeakness.DARK);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.GHOST)){
+            pokemonWeaknessListArray.add(PokemonWeakness.GHOST);
+            pokemonWeaknessListArray.add(PokemonWeakness.DARK);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.GRASS)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FIRE, PokemonWeakness.ICE, PokemonWeakness.FLYING,
-                    PokemonWeakness.POISON, PokemonWeakness.BUG);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.GRASS)){
+            pokemonWeaknessListArray.add(PokemonWeakness.FIRE);
+            pokemonWeaknessListArray.add(PokemonWeakness.FLYING);
+            pokemonWeaknessListArray.add(PokemonWeakness.ICE);
+            pokemonWeaknessListArray.add(PokemonWeakness.BUG);
+            pokemonWeaknessListArray.add(PokemonWeakness.POISON);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.GROUND)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.WATER, PokemonWeakness.GRASS, PokemonWeakness.ICE);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.GROUND)){
+            pokemonWeaknessListArray.add(PokemonWeakness.WATER);
+            pokemonWeaknessListArray.add(PokemonWeakness.GRASS);
+            pokemonWeaknessListArray.add(PokemonWeakness.ICE);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.ICE)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FIRE, PokemonWeakness.FIGHTING, PokemonWeakness.ROCK, PokemonWeakness.STEEL);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.ICE)){
+            pokemonWeaknessListArray.add(PokemonWeakness.FIRE);
+            pokemonWeaknessListArray.add(PokemonWeakness.FIGHTING);
+            pokemonWeaknessListArray.add(PokemonWeakness.ROCK);
+            pokemonWeaknessListArray.add(PokemonWeakness.STEEL);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.NORMAL)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.FIGHTING);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.NORMAL)){
+            pokemonWeaknessListArray.add(PokemonWeakness.FIGHTING);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.POISON)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.GROUND,  PokemonWeakness.PSYCHIC);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.POISON)){
+            pokemonWeaknessListArray.add(PokemonWeakness.GROUND);
+            pokemonWeaknessListArray.add(PokemonWeakness.PSYCHIC);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.PSYCHIC)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.BUG, PokemonWeakness.GHOST,  PokemonWeakness.DARK);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.PSYCHIC)){
+            pokemonWeaknessListArray.add(PokemonWeakness.BUG);
+            pokemonWeaknessListArray.add(PokemonWeakness.GHOST);
+            pokemonWeaknessListArray.add(PokemonWeakness.DARK);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.ROCK)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.WATER, PokemonWeakness.GRASS,  PokemonWeakness.FIGHTING, PokemonWeakness.STEEL, PokemonWeakness.GROUND);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.ROCK)){
+            pokemonWeaknessListArray.add(PokemonWeakness.WATER);
+            pokemonWeaknessListArray.add(PokemonWeakness.GRASS);
+            pokemonWeaknessListArray.add(PokemonWeakness.FIGHTING);
+            pokemonWeaknessListArray.add(PokemonWeakness.STEEL);
+            pokemonWeaknessListArray.add(PokemonWeakness.GROUND);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.STEEL)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.GROUND, PokemonWeakness.FIRE,  PokemonWeakness.FIGHTING);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.STEEL)){
+            pokemonWeaknessListArray.add(PokemonWeakness.GROUND);
+            pokemonWeaknessListArray.add(PokemonWeakness.FIRE);
+            pokemonWeaknessListArray.add(PokemonWeakness.FIGHTING);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.WATER)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.ELECTRIC, PokemonWeakness.GRASS);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.WATER)){
+            pokemonWeaknessListArray.add(PokemonWeakness.ELECTRIC);
+            pokemonWeaknessListArray.add(PokemonWeakness.GRASS);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.FIRE)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.WATER, PokemonWeakness.GROUND, PokemonWeakness.ROCK);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FIRE)){
+            pokemonWeaknessListArray.add(PokemonWeakness.WATER);
+            pokemonWeaknessListArray.add(PokemonWeakness.GROUND);
+            pokemonWeaknessListArray.add(PokemonWeakness.ROCK);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.FLYING)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.ELECTRIC, PokemonWeakness.ROCK, PokemonWeakness.ICE);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FLYING)){
+            pokemonWeaknessListArray.add(PokemonWeakness.ELECTRIC);
+            pokemonWeaknessListArray.add(PokemonWeakness.ICE);
+            pokemonWeaknessListArray.add(PokemonWeakness.ROCK);
         }
-        else if (pokemonDto.pokemonTypeList().contains(PokemonType.STELLAR)){
-            List<PokemonWeakness> pokemonWeaknessListArray = Arrays.asList(PokemonWeakness.STELLAR);
-            pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.STELLAR)){
+            pokemonWeaknessListArray.add(PokemonWeakness.STELLAR);
         }
+        pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
     }
-
-
+    
     public Optional<Pokemon> findPokemonByName(String name){
        return pokemonRepository.findPokemonByName(name);
     }
