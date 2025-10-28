@@ -50,6 +50,9 @@ public class PokemonService {
         if (pokemonDto.pokemonTypeList() != null && !pokemonDto.pokemonTypeList().isEmpty()) {
             pokemon.setPokemonTypeList(pokemonDto.pokemonTypeList());
         }
+        if (pokemonDto.pokemonWeaknessList() != null && !pokemonDto.pokemonWeaknessList().isEmpty()) {
+            pokemon.setPokemonWeaknessList(pokemonDto.pokemonWeaknessList());
+        }
         pokemonRegionOptional.ifPresent(pokemon::setRegion);
     }
 

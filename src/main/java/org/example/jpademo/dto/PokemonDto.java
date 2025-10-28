@@ -1,6 +1,8 @@
 package org.example.jpademo.dto;
 
 import org.example.jpademo.data.PokemonType;
+import org.example.jpademo.data.PokemonWeakness;
+
 import java.util.List;
 
 /**
@@ -15,6 +17,7 @@ public record PokemonDto (
         Integer level,
         String ability,
         List<PokemonType> pokemonTypeList,
+        List<PokemonWeakness> pokemonWeaknessList,
         String regionName,
         Integer regionId
 ) {}
