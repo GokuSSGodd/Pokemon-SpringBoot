@@ -3,7 +3,6 @@ package org.example.jpademo.service;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.data.PokemonRegion;
-import org.example.jpademo.exception.PokemonException;
 import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;

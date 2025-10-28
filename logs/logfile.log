@@ -1862,3 +1862,75 @@ Consider defining a bean of type 'org.example.jpademo.service.PokemonService' in
 2025-10-28T03:08:48.124-04:00  INFO 24248 --- [JPA-Demo] [http-nio-8080-exec-6] o.example.jpademo.aspect.PokemonAspect   : Method Started called: getPokemon()
 2025-10-28T03:08:48.129-04:00  INFO 24248 --- [JPA-Demo] [http-nio-8080-exec-6] o.e.j.controller.PokemonController       : Pokemon received Successfully
 2025-10-28T03:08:48.129-04:00  INFO 24248 --- [JPA-Demo] [http-nio-8080-exec-6] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: getPokemon()
+2025-10-28T03:13:19.533-04:00  INFO 24248 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-10-28T03:13:19.535-04:00  INFO 24248 --- [JPA-Demo] [Thread-75] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T03:13:19.542-04:00  INFO 24248 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T03:13:19.546-04:00  INFO 24248 --- [JPA-Demo] [Thread-75] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T03:13:19.547-04:00  INFO 24248 --- [JPA-Demo] [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2025-10-28T03:13:19.552-04:00  INFO 24248 --- [JPA-Demo] [Thread-75] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2025-10-28T03:13:19.621-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 24248 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-28T03:13:19.621-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T03:13:19.821-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T03:13:19.829-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 2 JPA repository interfaces.
+2025-10-28T03:13:19.897-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T03:13:19.898-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T03:13:19.898-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T03:13:19.915-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-10-28T03:13:19.915-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 292 ms
+2025-10-28T03:13:19.947-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T03:13:19.950-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T03:13:19.956-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T03:13:19.957-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2025-10-28T03:13:19.973-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4dd97599
+2025-10-28T03:13:19.974-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2025-10-28T03:13:19.975-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-22)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T03:13:20.009-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T03:13:20.032-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T03:13:20.104-04:00  WARN 24248 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T03:13:20.237-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T03:13:20.249-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T03:13:20.253-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.65 seconds (process running for 3119.784)
+2025-10-28T03:13:20.254-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-28T03:13:21.655-04:00  INFO 24248 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-10-28T03:13:21.657-04:00  INFO 24248 --- [JPA-Demo] [Thread-82] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-28T03:13:21.668-04:00  INFO 24248 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-28T03:13:21.671-04:00  INFO 24248 --- [JPA-Demo] [Thread-82] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T03:13:21.672-04:00  INFO 24248 --- [JPA-Demo] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2025-10-28T03:13:21.679-04:00  INFO 24248 --- [JPA-Demo] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2025-10-28T03:13:21.740-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 24248 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-28T03:13:21.740-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-28T03:13:21.878-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-28T03:13:21.884-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 2 JPA repository interfaces.
+2025-10-28T03:13:21.940-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-28T03:13:21.941-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-28T03:13:21.941-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-28T03:13:21.959-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-10-28T03:13:21.959-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 218 ms
+2025-10-28T03:13:21.982-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-28T03:13:21.984-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-28T03:13:21.988-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-28T03:13:21.989-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2025-10-28T03:13:22.003-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c786a16
+2025-10-28T03:13:22.003-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2025-10-28T03:13:22.005-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-23)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-28T03:13:22.034-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-28T03:13:22.052-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-28T03:13:22.111-04:00  WARN 24248 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-28T03:13:22.213-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-28T03:13:22.222-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-28T03:13:22.225-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.498 seconds (process running for 3121.755)
+2025-10-28T03:13:22.225-04:00  INFO 24248 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
