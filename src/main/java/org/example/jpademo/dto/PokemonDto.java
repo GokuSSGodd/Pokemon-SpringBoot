@@ -1,5 +1,9 @@
 package org.example.jpademo.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import org.example.jpademo.data.PokemonType;
 import org.example.jpademo.data.PokemonWeakness;
 
@@ -13,11 +17,16 @@ import java.util.List;
  * Also adds a layer of security to the application
  **/
 public record PokemonDto (
+        @NotNull @NotBlank
         String name,
+        @NotNull @NotBlank @Min(5) @Max(100)
         Integer level,
+        @NotNull @NotBlank
         String ability,
+        @NotNull.List({}) @NotBlank.List({})
         List<PokemonType> pokemonTypeList,
+        @NotNull.List({}) @NotBlank.List({})
         List<PokemonWeakness> pokemonWeaknessList,
-        String regionName,
-        Integer regionId
+        @NotNull @NotBlank
+        String regionName
 ) {}

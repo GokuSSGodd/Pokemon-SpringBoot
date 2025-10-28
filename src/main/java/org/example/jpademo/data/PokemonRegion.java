@@ -10,9 +10,10 @@ import lombok.*;
  **/
 @Entity
 @Getter @Setter
+@Builder @AllArgsConstructor @NoArgsConstructor
 public class PokemonRegion {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String name;
     private Integer population;

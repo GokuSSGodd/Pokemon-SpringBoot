@@ -26,22 +26,23 @@ public class PokemonService {
         this.pokemonRepository = pokemonRepository;
     }
 
-    public Pokemon createPokemon(PokemonDto pokemonDto, Optional<PokemonRegion> pokemonRegion) {
-        var pokeRegion = pokemonRegion.orElseThrow(()->
-                new PokemonRegionException(pokemonDto.regionName())
-        );
-        var pokemon = new Pokemon();
-        pokemon.setName(pokemonDto.name());
-        pokemon.setAbility(pokemonDto.ability());
-        pokemon.setLevel(pokemonDto.level());
-        pokemon.setRegion(pokeRegion);
-        pokemon.setPokemonTypeList(pokemonDto.pokemonTypeList());
-        setPokemonWeakness(pokemonDto, pokemon);
-        return pokemon;
+    public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
+        return Pokemon.builder()
+                .name(pokemonDto.name())
+                .ability(pokemonDto.ability())
+                .level(pokemonDto.level())
+                .region(pokemonRegion)
+                .pokemonTypeList(pokemonDto.pokemonTypeList())
+                /*.pokemonWeaknessList(pokemonDto.pokemonWeaknessList())*/
+                .build();
     }
 
     public void savePokemon(Pokemon pokemon){
         pokemonRepository.save(pokemon);
+    }
+
+    public void deletePokemon(Pokemon pokemon){
+        pokemonRepository.delete(pokemon);
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegionOptional) {
@@ -53,12 +54,13 @@ public class PokemonService {
         }
         if (pokemonDto.pokemonTypeList() != null && !pokemonDto.pokemonTypeList().isEmpty()) {
             pokemon.setPokemonTypeList(pokemonDto.pokemonTypeList());
-            setPokemonWeakness(pokemonDto, pokemon);
+            /*setPokemonWeakness(pokemonDto, pokemon);*/
+            pokemon.setPokemonWeaknessList(pokemonDto.pokemonWeaknessList());
         }
         pokemonRegionOptional.ifPresent(pokemon::setRegion);
     }
 
-    public void setPokemonWeakness(PokemonDto pokemonDto, Pokemon pokemon){
+    public List<PokemonWeakness> setPokemonWeakness(PokemonDto pokemonDto, Pokemon pokemon){
         List<PokemonWeakness> pokemonWeaknessListArray = new ArrayList<>();
         if (pokemonDto.pokemonTypeList().contains(PokemonType.BUG)){
             pokemonWeaknessListArray.add(PokemonWeakness.FIRE);
@@ -150,15 +152,42 @@ public class PokemonService {
         if (pokemonDto.pokemonTypeList().contains(PokemonType.STELLAR)){
             pokemonWeaknessListArray.add(PokemonWeakness.STELLAR);
         }
-        pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);
-    }
-    
-    public Optional<Pokemon> findPokemonByName(String name){
-       return pokemonRepository.findPokemonByName(name);
+        removePokemonWeakness(pokemonDto, pokemon, pokemonWeaknessListArray);
+        /*pokemon.setPokemonWeaknessList(pokemonWeaknessListArray);*/
+        return pokemonWeaknessListArray;
     }
 
-    public void deletePokemonByName(Pokemon pokemon){
-        pokemonRepository.delete(pokemon);
+    public void removePokemonWeakness(PokemonDto pokemonDto, Pokemon pokemon, List<PokemonWeakness> pokemonWeaknessListArray){
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.GHOST)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.NORMAL);
+            pokemonWeaknessListArray.remove(PokemonWeakness.FIGHTING);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.NORMAL)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.GHOST);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.STEEL)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.POISON);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FLYING)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.GROUND);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.DARK)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.PSYCHIC);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.FAIRY)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.DRAGON);
+            pokemonWeaknessListArray.remove(PokemonWeakness.FIGHTING);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.GROUND)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.ELECTRIC);
+        }
+        if (pokemonDto.pokemonTypeList().contains(PokemonType.WATER)){
+            pokemonWeaknessListArray.remove(PokemonWeakness.FIRE);
+        }
+    }
+
+    public Optional<Pokemon> findPokemonByName(String name){
+       return pokemonRepository.findPokemonByName(name);
     }
 
 }

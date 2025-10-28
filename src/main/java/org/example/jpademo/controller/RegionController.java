@@ -1,5 +1,6 @@
 package org.example.jpademo.controller;
 
+import jakarta.validation.Valid;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonRegionDto;
 import org.example.jpademo.exception.PokemonRegionException;
@@ -28,7 +29,7 @@ public class RegionController {
     }
 
     @PostMapping("/add")
-    public String addNewRegion(@RequestBody PokemonRegionDto pokemonRegionDto) {
+    public String addNewRegion(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         PokemonRegion pokemonRegion = pokemonRegionService.createNewPokemonRegion(pokemonRegionDto);
         pokemonRegionService.savePokemonRegion(pokemonRegion);
         return pokemonRegion.getName() + " was added successfully";
@@ -36,7 +37,7 @@ public class RegionController {
 
     @DeleteMapping("/delete")
     public String deletePokemonRegion(@RequestParam String name) {
-        var pokemonRegionOptional = pokemonRegionService.getPokemonRegion(name);
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
         pokemonRegionService.deletePokemonRegion(pokemonRegion);
         return  pokemonRegion.getName() + " was deleted successfully";

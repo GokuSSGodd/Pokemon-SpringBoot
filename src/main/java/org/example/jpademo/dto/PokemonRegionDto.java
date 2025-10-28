@@ -1,5 +1,9 @@
 package org.example.jpademo.dto;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 /**
  * Dto is a way to be able to retrieve information from the database in order to update
  * an object within the database as they relate to the Pokemon & its Region.
@@ -8,6 +12,8 @@ package org.example.jpademo.dto;
  * Also adds a layer of security to the application
  **/
 public record PokemonRegionDto(
+        @NotNull @NotBlank
         String regionName,
+        @NotNull @Min(10)
         Integer population
 ) {}
