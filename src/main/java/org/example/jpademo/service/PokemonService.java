@@ -1,13 +1,14 @@
 package org.example.jpademo.service;
 
+import lombok.RequiredArgsConstructor;
 import org.example.jpademo.data.PokemonType;
 import org.example.jpademo.data.PokemonWeakness;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.data.PokemonRegion;
-import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
@@ -19,12 +20,9 @@ import java.util.*;
  * through the service itself, it can also be used with other controllers
  **/
 @Service
+@RequiredArgsConstructor
 public class PokemonService {
     private final PokemonRepository pokemonRepository;
-
-    public PokemonService(PokemonRepository pokemonRepository) {
-        this.pokemonRepository = pokemonRepository;
-    }
 
     public Pokemon createPokemon(PokemonDto pokemonDto, PokemonRegion pokemonRegion) {
         return Pokemon.builder()
@@ -37,19 +35,26 @@ public class PokemonService {
                 .build();
     }
 
+    @Transactional
     public void savePokemon(Pokemon pokemon){
         pokemonRepository.save(pokemon);
     }
 
+    @Transactional
     public void deletePokemon(Pokemon pokemon){
         pokemonRepository.delete(pokemon);
+    }
+
+    @Transactional(readOnly = true)
+    public Optional<Pokemon> findPokemonByName(String name){
+        return pokemonRepository.findPokemonByName(name);
     }
 
     public void updatePokemon(PokemonDto pokemonDto, Pokemon pokemon, Optional<PokemonRegion> pokemonRegionOptional) {
         if (pokemonDto.ability() != null && !pokemonDto.ability().isEmpty()) {
             pokemon.setAbility(pokemonDto.ability());
         }
-        if (pokemonDto.level() != null && pokemonDto.level() > 0) {
+        if (!pokemon.getLevel().equals(pokemonDto.level())) {
             pokemon.setLevel(pokemonDto.level());
         }
         if (pokemonDto.pokemonTypeList() != null && !pokemonDto.pokemonTypeList().isEmpty()) {
@@ -184,10 +189,6 @@ public class PokemonService {
         if (pokemonDto.pokemonTypeList().contains(PokemonType.WATER)){
             pokemonWeaknessListArray.remove(PokemonWeakness.FIRE);
         }
-    }
-
-    public Optional<Pokemon> findPokemonByName(String name){
-       return pokemonRepository.findPokemonByName(name);
     }
 
 }

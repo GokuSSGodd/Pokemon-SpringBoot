@@ -4,6 +4,10 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import org.example.jpademo.data.PokemonType;
 import org.example.jpademo.data.PokemonWeakness;
 
@@ -16,6 +20,8 @@ import java.util.List;
  * to the Pokemon using its region you would do that with this
  * Also adds a layer of security to the application
  **/
+
+@Builder
 public record PokemonDto (
         @NotNull @NotBlank
         String name,

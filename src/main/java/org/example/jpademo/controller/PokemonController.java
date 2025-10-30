@@ -1,7 +1,7 @@
 package org.example.jpademo.controller;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
@@ -18,15 +18,11 @@ import org.springframework.web.bind.annotation.*;
  **/
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/pokemon")
 public class PokemonController{
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
-
-    public PokemonController(PokemonRegionService pokemonRegionService, PokemonService pokemonService) {
-        this.pokemonRegionService = pokemonRegionService;
-        this.pokemonService = pokemonService;
-    }
 
     @PostMapping("/add")
     public String addNewPokemon(@RequestBody PokemonDto pokemonDto){

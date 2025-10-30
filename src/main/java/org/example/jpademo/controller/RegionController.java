@@ -7,6 +7,7 @@ import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.repository.PokemonRegionRepository;
 import org.example.jpademo.service.PokemonRegionService;
 import org.example.jpademo.service.PokemonService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -29,18 +30,18 @@ public class RegionController {
     }
 
     @PostMapping("/add")
-    public String addNewRegion(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
+    public ResponseEntity<PokemonRegionDto> addNewRegion(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         PokemonRegion pokemonRegion = pokemonRegionService.createNewPokemonRegion(pokemonRegionDto);
         pokemonRegionService.savePokemonRegion(pokemonRegion);
-        return pokemonRegion.getName() + " was added successfully";
+        return ResponseEntity.ok().body(pokemonRegionDto);
     }
 
     @DeleteMapping("/delete")
-    public String deletePokemonRegion(@RequestParam String name) {
-        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
+    public ResponseEntity<PokemonRegionDto> deletePokemonRegion(@RequestParam PokemonRegionDto pokemonRegionDto) {
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionDto.regionName());
         var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
         pokemonRegionService.deletePokemonRegion(pokemonRegion);
-        return  pokemonRegion.getName() + " was deleted successfully";
+        return ResponseEntity.ok().body(pokemonRegionDto);
     }
 
 
