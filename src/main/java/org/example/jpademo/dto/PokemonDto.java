@@ -1,16 +1,8 @@
 package org.example.jpademo.dto;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import lombok.AllArgsConstructor;
+import jakarta.validation.constraints.*;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.example.jpademo.data.PokemonType;
-import org.example.jpademo.data.PokemonWeakness;
-
 import java.util.List;
 
 /**
@@ -20,19 +12,16 @@ import java.util.List;
  * to the Pokemon using its region you would do that with this
  * Also adds a layer of security to the application
  **/
-
 @Builder
 public record PokemonDto (
-        @NotNull @NotBlank
+        @NotBlank
         String name,
-        @NotNull @NotBlank @Min(5) @Max(100)
+        @NotNull @Min(5) @Max(100)
         Integer level,
-        @NotNull @NotBlank
+        @NotBlank
         String ability,
-        @NotNull.List({}) @NotBlank.List({})
+        @NotEmpty
         List<PokemonType> pokemonTypeList,
-        @NotNull.List({}) @NotBlank.List({})
-        List<PokemonWeakness> pokemonWeaknessList,
-        @NotNull @NotBlank
+        @NotBlank
         String regionName
 ) {}

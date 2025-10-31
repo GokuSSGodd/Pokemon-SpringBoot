@@ -1,22 +1,868 @@
-2025-10-30T17:32:44.920-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
-2025-10-30T17:32:44.932-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-10-30T17:32:45.048-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-30T17:32:45.050-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-30T17:32:47.824-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-10-30T17:32:47.994-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 2 JPA repository interfaces.
-2025-10-30T17:32:49.665-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-10-30T17:32:49.710-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-30T17:32:49.712-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-30T17:32:49.916-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-30T17:32:49.917-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4865 ms
-2025-10-30T17:32:50.443-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-10-30T17:32:50.651-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
-2025-10-30T17:32:50.766-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-10-30T17:32:51.408-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-10-30T17:32:51.515-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-10-30T17:32:52.482-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cf95bf8
-2025-10-30T17:32:52.486-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-10-30T17:32:52.774-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-10-31T00:04:45.823-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:04:45.866-04:00  INFO 19664 --- [JPA-Demo] [Thread-209] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:04:45.894-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:04:45.909-04:00  INFO 19664 --- [JPA-Demo] [Thread-209] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:04:45.925-04:00  INFO 19664 --- [JPA-Demo] [Thread-209] com.zaxxer.hikari.HikariDataSource       : HikariPool-52 - Shutdown initiated...
+2025-10-31T00:04:45.948-04:00  INFO 19664 --- [JPA-Demo] [Thread-209] com.zaxxer.hikari.HikariDataSource       : HikariPool-52 - Shutdown completed.
+2025-10-31T00:04:46.387-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:04:46.388-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:04:46.971-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:04:47.002-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:04:47.199-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:04:47.202-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:04:47.202-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:04:47.230-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:04:47.231-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 836 ms
+2025-10-31T00:04:47.275-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:04:47.280-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:04:47.299-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:04:47.301-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-53 - Starting...
+2025-10-31T00:04:47.416-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-53 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68cdf557
+2025-10-31T00:04:47.417-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-53 - Start completed.
+2025-10-31T00:04:47.421-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-53)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:04:47.491-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:04:47.571-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:04:47.803-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:04:47.951-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:04:47.968-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:04:47.973-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.668 seconds (process running for 23526.835)
+2025-10-31T00:04:47.974-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:05:35.951-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:05:35.954-04:00  INFO 19664 --- [JPA-Demo] [Thread-213] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:05:35.963-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:05:35.965-04:00  INFO 19664 --- [JPA-Demo] [Thread-213] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:05:35.965-04:00  INFO 19664 --- [JPA-Demo] [Thread-213] com.zaxxer.hikari.HikariDataSource       : HikariPool-53 - Shutdown initiated...
+2025-10-31T00:05:35.973-04:00  INFO 19664 --- [JPA-Demo] [Thread-213] com.zaxxer.hikari.HikariDataSource       : HikariPool-53 - Shutdown completed.
+2025-10-31T00:05:36.094-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:05:36.094-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:05:36.441-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:05:36.458-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:05:36.570-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:05:36.571-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:05:36.571-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:05:36.610-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:05:36.611-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 515 ms
+2025-10-31T00:05:36.660-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:05:36.663-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:05:36.675-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:05:36.676-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-54 - Starting...
+2025-10-31T00:05:36.700-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-54 - Added connection com.mysql.cj.jdbc.ConnectionImpl@ab48cb0
+2025-10-31T00:05:36.701-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-54 - Start completed.
+2025-10-31T00:05:36.703-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-54)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:05:36.767-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:05:36.838-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:05:36.961-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:05:37.100-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:05:37.118-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:05:37.122-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.061 seconds (process running for 23575.984)
+2025-10-31T00:05:37.123-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:06:35.136-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:06:35.138-04:00  INFO 19664 --- [JPA-Demo] [Thread-217] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:06:35.146-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:06:35.147-04:00  INFO 19664 --- [JPA-Demo] [Thread-217] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:06:35.148-04:00  INFO 19664 --- [JPA-Demo] [Thread-217] com.zaxxer.hikari.HikariDataSource       : HikariPool-54 - Shutdown initiated...
+2025-10-31T00:06:35.156-04:00  INFO 19664 --- [JPA-Demo] [Thread-217] com.zaxxer.hikari.HikariDataSource       : HikariPool-54 - Shutdown completed.
+2025-10-31T00:06:35.268-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:06:35.268-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:06:35.619-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:06:35.632-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:06:35.738-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:06:35.739-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:06:35.739-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:06:35.781-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:06:35.781-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
+2025-10-31T00:06:35.821-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:06:35.824-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:06:35.836-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:06:35.837-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Starting...
+2025-10-31T00:06:35.873-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-55 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2de90ae2
+2025-10-31T00:06:35.873-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Start completed.
+2025-10-31T00:06:35.876-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-55)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:06:35.934-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:06:35.969-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:06:36.117-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:06:36.277-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:06:36.293-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:06:36.300-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.064 seconds (process running for 23635.163)
+2025-10-31T00:06:36.301-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:06:45.628-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:06:45.629-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:06:45.631-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-31T00:06:45.639-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-0] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'pokemonRegionDto' for method parameter type PokemonRegionDto is not present]
+2025-10-31T00:07:01.558-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:07:01.659-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()
+2025-10-31T00:07:01.700-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: failed to lazily initialize a collection: could not initialize proxy - no Session]
+2025-10-31T00:07:05.823-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-2] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:07:05.831-04:00 ERROR 19664 --- [JPA-Demo] [tomcat-handler-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.example.jpademo.exception.PokemonException: Pokemon Not Found] with root cause
+
+org.example.jpademo.exception.PokemonException: Pokemon Not Found
+	at org.example.jpademo.controller.PokemonController.lambda$deletePokemon$0(PokemonController.java:61) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.example.jpademo.controller.PokemonController.deletePokemon(PokemonController.java:61) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.aspect.PokemonAspect.logGetPokemon(PokemonAspect.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.controller.PokemonController$$SpringCGLIB$$0.deletePokemon(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:456) ~[na:na]
+
+2025-10-31T00:07:10.093-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:07:10.104-04:00 ERROR 19664 --- [JPA-Demo] [tomcat-handler-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.example.jpademo.exception.PokemonException: Pokemon Not Found] with root cause
+
+org.example.jpademo.exception.PokemonException: Pokemon Not Found
+	at org.example.jpademo.controller.PokemonController.lambda$deletePokemon$0(PokemonController.java:61) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.example.jpademo.controller.PokemonController.deletePokemon(PokemonController.java:61) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.aspect.PokemonAspect.logGetPokemon(PokemonAspect.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.controller.PokemonController$$SpringCGLIB$$0.deletePokemon(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:456) ~[na:na]
+
+2025-10-31T00:08:04.260-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:08:04.281-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()
+2025-10-31T00:08:04.281-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: failed to lazily initialize a collection: could not initialize proxy - no Session]
+2025-10-31T00:10:28.809-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:10:28.811-04:00  INFO 19664 --- [JPA-Demo] [Thread-221] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:10:28.821-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:10:28.822-04:00  INFO 19664 --- [JPA-Demo] [Thread-221] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:10:28.823-04:00  INFO 19664 --- [JPA-Demo] [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Shutdown initiated...
+2025-10-31T00:10:28.829-04:00  INFO 19664 --- [JPA-Demo] [Thread-221] com.zaxxer.hikari.HikariDataSource       : HikariPool-55 - Shutdown completed.
+2025-10-31T00:10:28.950-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:10:28.950-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:10:29.240-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:10:29.250-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:10:29.366-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:10:29.371-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:10:29.371-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:10:29.428-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:10:29.428-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 475 ms
+2025-10-31T00:10:29.474-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:10:29.479-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:10:29.491-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:10:29.493-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Starting...
+2025-10-31T00:10:29.518-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-56 - Added connection com.mysql.cj.jdbc.ConnectionImpl@617d278f
+2025-10-31T00:10:29.518-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Start completed.
+2025-10-31T00:10:29.520-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-56)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:10:29.602-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:10:29.636-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:10:29.822-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:10:30.025-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:10:30.046-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:10:30.050-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.142 seconds (process running for 23868.912)
+2025-10-31T00:10:30.051-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:10:31.465-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:10:31.466-04:00  INFO 19664 --- [JPA-Demo] [Thread-225] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:10:31.475-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:10:31.476-04:00  INFO 19664 --- [JPA-Demo] [Thread-225] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:10:31.477-04:00  INFO 19664 --- [JPA-Demo] [Thread-225] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Shutdown initiated...
+2025-10-31T00:10:31.487-04:00  INFO 19664 --- [JPA-Demo] [Thread-225] com.zaxxer.hikari.HikariDataSource       : HikariPool-56 - Shutdown completed.
+2025-10-31T00:10:31.616-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:10:31.616-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:10:31.934-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:10:31.951-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:10:32.061-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:10:32.061-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:10:32.061-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:10:32.096-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:10:32.096-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 478 ms
+2025-10-31T00:10:32.128-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:10:32.132-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:10:32.139-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:10:32.139-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Starting...
+2025-10-31T00:10:32.161-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-57 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d1566e6
+2025-10-31T00:10:32.161-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Start completed.
+2025-10-31T00:10:32.163-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-57)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:10:32.217-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:10:32.248-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:10:32.392-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:10:32.530-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:10:32.543-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:10:32.549-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.961 seconds (process running for 23871.411)
+2025-10-31T00:10:32.550-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:10:34.311-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:10:34.311-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:10:34.312-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:10:34.317-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:10:34.327-04:00 ERROR 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.example.jpademo.exception.PokemonException: Pokemon Not Found] with root cause
+
+org.example.jpademo.exception.PokemonException: Pokemon Not Found
+	at org.example.jpademo.controller.PokemonController.lambda$deletePokemon$0(PokemonController.java:61) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.example.jpademo.controller.PokemonController.deletePokemon(PokemonController.java:61) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.aspect.PokemonAspect.logGetPokemon(PokemonAspect.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.controller.PokemonController$$SpringCGLIB$$0.deletePokemon(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:456) ~[na:na]
+
+2025-10-31T00:11:01.310-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:11:01.311-04:00  INFO 19664 --- [JPA-Demo] [Thread-229] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:11:01.321-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:11:01.322-04:00  INFO 19664 --- [JPA-Demo] [Thread-229] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:11:01.323-04:00  INFO 19664 --- [JPA-Demo] [Thread-229] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Shutdown initiated...
+2025-10-31T00:11:01.330-04:00  INFO 19664 --- [JPA-Demo] [Thread-229] com.zaxxer.hikari.HikariDataSource       : HikariPool-57 - Shutdown completed.
+2025-10-31T00:11:01.426-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:11:01.426-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:11:01.588-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:11:01.601-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:11:01.695-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:11:01.696-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:11:01.696-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:11:01.723-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:11:01.723-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 294 ms
+2025-10-31T00:11:01.748-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:11:01.750-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:11:01.755-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:11:01.755-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Starting...
+2025-10-31T00:11:01.778-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-58 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5945eb93
+2025-10-31T00:11:01.779-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Start completed.
+2025-10-31T00:11:01.780-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-58)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:11:01.821-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:11:01.847-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:11:01.946-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:11:02.070-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:11:02.086-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:11:02.090-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.691 seconds (process running for 23900.953)
+2025-10-31T00:11:02.091-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:11:03.513-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:11:03.513-04:00  INFO 19664 --- [JPA-Demo] [Thread-233] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:11:03.523-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:11:03.524-04:00  INFO 19664 --- [JPA-Demo] [Thread-233] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:11:03.525-04:00  INFO 19664 --- [JPA-Demo] [Thread-233] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Shutdown initiated...
+2025-10-31T00:11:03.532-04:00  INFO 19664 --- [JPA-Demo] [Thread-233] com.zaxxer.hikari.HikariDataSource       : HikariPool-58 - Shutdown completed.
+2025-10-31T00:11:03.626-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:11:03.627-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:11:03.850-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:11:03.875-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:11:03.967-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:11:03.967-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:11:03.968-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:11:03.988-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:11:03.988-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 360 ms
+2025-10-31T00:11:04.015-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:11:04.019-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:11:04.029-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:11:04.030-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-59 - Starting...
+2025-10-31T00:11:04.049-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-59 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2066a627
+2025-10-31T00:11:04.049-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-59 - Start completed.
+2025-10-31T00:11:04.050-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-59)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:11:04.085-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:11:04.119-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:11:04.261-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:11:04.379-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:11:04.387-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:11:04.389-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.79 seconds (process running for 23903.251)
+2025-10-31T00:11:04.389-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:13:08.026-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2025-10-31T00:13:08.027-04:00  INFO 19664 --- [JPA-Demo] [Thread-237] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:13:08.034-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:13:08.034-04:00  INFO 19664 --- [JPA-Demo] [Thread-237] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:13:08.036-04:00  INFO 19664 --- [JPA-Demo] [Thread-237] com.zaxxer.hikari.HikariDataSource       : HikariPool-59 - Shutdown initiated...
+2025-10-31T00:13:08.044-04:00  INFO 19664 --- [JPA-Demo] [Thread-237] com.zaxxer.hikari.HikariDataSource       : HikariPool-59 - Shutdown completed.
+2025-10-31T00:13:08.157-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:13:08.157-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:13:08.435-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:13:08.452-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:13:08.566-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:13:08.566-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:13:08.567-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:13:08.600-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:13:08.600-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 441 ms
+2025-10-31T00:13:08.636-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:13:08.641-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:13:08.651-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:13:08.653-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-60 - Starting...
+2025-10-31T00:13:08.679-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-60 - Added connection com.mysql.cj.jdbc.ConnectionImpl@59dbcef7
+2025-10-31T00:13:08.679-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-60 - Start completed.
+2025-10-31T00:13:08.681-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-60)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:13:08.736-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:13:08.766-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:13:08.851-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:13:09.040-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:13:09.059-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:13:09.063-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.941 seconds (process running for 24027.926)
+2025-10-31T00:13:09.065-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:13:10.467-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (2 additions, 0 deletions, 0 modifications)
+2025-10-31T00:13:10.468-04:00  INFO 19664 --- [JPA-Demo] [Thread-241] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:13:10.475-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:13:10.477-04:00  INFO 19664 --- [JPA-Demo] [Thread-241] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:13:10.477-04:00  INFO 19664 --- [JPA-Demo] [Thread-241] com.zaxxer.hikari.HikariDataSource       : HikariPool-60 - Shutdown initiated...
+2025-10-31T00:13:10.482-04:00  INFO 19664 --- [JPA-Demo] [Thread-241] com.zaxxer.hikari.HikariDataSource       : HikariPool-60 - Shutdown completed.
+2025-10-31T00:13:10.582-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:13:10.582-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:13:10.863-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:13:10.878-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:13:10.971-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:13:10.971-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:13:10.971-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:13:11.003-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:13:11.003-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 418 ms
+2025-10-31T00:13:11.036-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:13:11.039-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:13:11.046-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:13:11.047-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-61 - Starting...
+2025-10-31T00:13:11.068-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-61 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18be0bb1
+2025-10-31T00:13:11.068-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-61 - Start completed.
+2025-10-31T00:13:11.071-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-61)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:13:11.113-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:13:11.138-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:13:11.244-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:13:11.390-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:13:11.400-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:13:11.403-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.847 seconds (process running for 24030.265)
+2025-10-31T00:13:11.403-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:14:35.971-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:14:35.973-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:14:35.976-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-31T00:14:36.028-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: addNewPokemon()
+2025-10-31T00:14:36.179-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: addNewPokemon()
+2025-10-31T00:15:11.614-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Started called: updatePokemon()
+2025-10-31T00:15:11.653-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: updatePokemon()
+2025-10-31T00:16:23.402-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:16:23.408-04:00  INFO 19664 --- [JPA-Demo] [Thread-245] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:16:23.417-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:16:23.423-04:00  INFO 19664 --- [JPA-Demo] [Thread-245] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:16:23.426-04:00  INFO 19664 --- [JPA-Demo] [Thread-245] com.zaxxer.hikari.HikariDataSource       : HikariPool-61 - Shutdown initiated...
+2025-10-31T00:16:23.439-04:00  INFO 19664 --- [JPA-Demo] [Thread-245] com.zaxxer.hikari.HikariDataSource       : HikariPool-61 - Shutdown completed.
+2025-10-31T00:16:23.741-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:16:23.741-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:16:24.064-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:16:24.080-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:16:24.251-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:16:24.252-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:16:24.253-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:16:24.295-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:16:24.296-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 550 ms
+2025-10-31T00:16:24.371-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:16:24.376-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:16:24.393-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:16:24.394-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Starting...
+2025-10-31T00:16:24.430-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-62 - Added connection com.mysql.cj.jdbc.ConnectionImpl@589f49e
+2025-10-31T00:16:24.430-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Start completed.
+2025-10-31T00:16:24.432-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-62)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:16:24.519-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:16:24.566-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:16:24.581-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pokemonController': Resolution of declared constructors on bean Class [org.example.jpademo.controller.PokemonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1b9e44c6] failed
+2025-10-31T00:16:24.582-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:16:24.584-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Shutdown initiated...
+2025-10-31T00:16:24.638-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-62 - Shutdown completed.
+2025-10-31T00:16:24.639-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-31T00:16:24.646-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-31T00:16:24.652-04:00 ERROR 19664 --- [JPA-Demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pokemonController': Resolution of declared constructors on bean Class [org.example.jpademo.controller.PokemonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@1b9e44c6] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1229) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.example.jpademo.JpaDemoApplication.main(JpaDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: java.lang.NoClassDefFoundError: org/example/jpademo/service/PokemonService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:2985) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2354) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.example.jpademo.service.PokemonService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 27 common frames omitted
+
+2025-10-31T00:16:26.140-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:16:26.141-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:16:26.479-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:16:26.497-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:16:26.614-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:16:26.614-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:16:26.615-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:16:26.653-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-11].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:16:26.653-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 510 ms
+2025-10-31T00:16:26.697-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:16:26.702-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:16:26.710-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:16:26.711-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-63 - Starting...
+2025-10-31T00:16:26.734-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-63 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60c5a45a
+2025-10-31T00:16:26.735-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-63 - Start completed.
+2025-10-31T00:16:26.736-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-63)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:16:26.787-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:16:26.831-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:16:27.013-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:16:27.253-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:16:27.271-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:16:27.276-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.186 seconds (process running for 24226.139)
+2025-10-31T00:16:27.277-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:16:27.312-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-11].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:16:27.312-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:16:27.315-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:16:27.344-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: updatePokemon()
+2025-10-31T00:16:27.419-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: updatePokemon()
+2025-10-31T00:16:28.243-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Started called: updatePokemon()
+2025-10-31T00:16:28.265-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: updatePokemon()
+2025-10-31T00:16:44.423-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-2] o.example.jpademo.aspect.PokemonAspect   : Method Started called: updatePokemon()
+2025-10-31T00:16:44.443-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-2] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: updatePokemon()
+2025-10-31T00:17:04.470-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Started called: getPokemon()
+2025-10-31T00:17:04.479-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.e.j.controller.PokemonController       : Pokemon received Successfully
+2025-10-31T00:17:04.479-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: getPokemon()
+2025-10-31T00:17:26.070-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:17:26.097-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()
+2025-10-31T00:17:26.099-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: failed to lazily initialize a collection: could not initialize proxy - no Session]
+2025-10-31T00:20:47.104-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:20:47.128-04:00  INFO 19664 --- [JPA-Demo] [Thread-249] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:20:47.155-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:20:47.169-04:00  INFO 19664 --- [JPA-Demo] [Thread-249] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:20:47.180-04:00  INFO 19664 --- [JPA-Demo] [Thread-249] com.zaxxer.hikari.HikariDataSource       : HikariPool-63 - Shutdown initiated...
+2025-10-31T00:20:47.195-04:00  INFO 19664 --- [JPA-Demo] [Thread-249] com.zaxxer.hikari.HikariDataSource       : HikariPool-63 - Shutdown completed.
+2025-10-31T00:20:47.510-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:20:47.511-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:20:47.890-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:20:47.908-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:20:48.089-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:20:48.092-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:20:48.092-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:20:48.138-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-11].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:20:48.138-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 623 ms
+2025-10-31T00:20:48.201-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:20:48.205-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:20:48.219-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:20:48.221-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-64 - Starting...
+2025-10-31T00:20:48.288-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-64 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a2a9160
+2025-10-31T00:20:48.288-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-64 - Start completed.
+2025-10-31T00:20:48.292-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-64)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:20:48.431-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:20:48.500-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:20:48.517-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pokemonController': Resolution of declared constructors on bean Class [org.example.jpademo.controller.PokemonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@53caa5f] failed
+2025-10-31T00:20:48.518-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:20:48.519-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-64 - Shutdown initiated...
+2025-10-31T00:20:48.569-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-64 - Shutdown completed.
+2025-10-31T00:20:48.570-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-10-31T00:20:48.576-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-10-31T00:20:48.583-04:00 ERROR 19664 --- [JPA-Demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pokemonController': Resolution of declared constructors on bean Class [org.example.jpademo.controller.PokemonController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@53caa5f] failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:384) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1334) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1229) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.11.jar:6.2.11]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.6.jar:3.5.6]
+	at org.example.jpademo.JpaDemoApplication.main(JpaDemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+Caused by: java.lang.NoClassDefFoundError: org/example/jpademo/service/PokemonService
+	at java.base/java.lang.Class.getDeclaredConstructors0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredConstructors(Class.java:2985) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredConstructors(Class.java:2354) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:379) ~[spring-beans-6.2.11.jar:6.2.11]
+	... 23 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.example.jpademo.service.PokemonService
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.5.6.jar:3.5.6]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	... 27 common frames omitted
+
+2025-10-31T00:22:34.628-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:22:34.630-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:22:35.198-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:22:35.233-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:22:35.495-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:22:35.502-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:22:35.503-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:22:35.565-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:22:35.565-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 925 ms
+2025-10-31T00:22:35.657-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:22:35.667-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:22:35.727-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:22:35.729-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-65 - Starting...
+2025-10-31T00:22:35.844-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-65 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1c3ffb38
+2025-10-31T00:22:35.845-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-65 - Start completed.
+2025-10-31T00:22:35.868-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-65)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:22:36.058-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:22:36.140-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:22:36.424-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:22:36.688-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:22:36.713-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:22:36.720-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 2.239 seconds (process running for 24595.583)
+2025-10-31T00:22:36.724-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:24:26.294-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:24:26.301-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:24:26.310-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2025-10-31T00:24:26.474-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: addNewPokemon()
+2025-10-31T00:24:26.614-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: addNewPokemon()
+2025-10-31T00:24:35.804-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:24:35.845-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()
+2025-10-31T00:26:00.337-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Started called: addNewPokemon()
+2025-10-31T00:26:00.583-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: addNewPokemon()
+2025-10-31T00:26:02.525-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:26:02.565-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-4] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()
+2025-10-31T00:27:32.226-04:00  INFO 19664 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 3 deletions, 0 modifications)
+2025-10-31T00:27:32.280-04:00  INFO 19664 --- [JPA-Demo] [Thread-256] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:27:32.320-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:27:32.358-04:00  INFO 19664 --- [JPA-Demo] [Thread-256] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:27:32.422-04:00  INFO 19664 --- [JPA-Demo] [Thread-256] com.zaxxer.hikari.HikariDataSource       : HikariPool-65 - Shutdown initiated...
+2025-10-31T00:27:32.493-04:00  INFO 19664 --- [JPA-Demo] [Thread-256] com.zaxxer.hikari.HikariDataSource       : HikariPool-65 - Shutdown completed.
+2025-10-31T00:27:33.237-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 19664 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:27:33.237-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:27:33.803-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:27:33.839-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:27:34.140-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:27:34.150-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:27:34.150-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:27:34.209-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:27:34.209-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 964 ms
+2025-10-31T00:27:34.323-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:27:34.332-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:27:34.370-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:27:34.374-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-66 - Starting...
+2025-10-31T00:27:34.668-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-66 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f316e92
+2025-10-31T00:27:34.669-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-66 - Start completed.
+2025-10-31T00:27:34.677-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-66)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:27:34.845-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:27:35.081-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:27:35.419-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:27:35.750-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:27:35.771-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:27:35.777-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 2.653 seconds (process running for 24894.64)
+2025-10-31T00:27:35.779-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:28:17.154-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:28:17.154-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:28:17.156-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:34:14.561-04:00  INFO 19664 --- [JPA-Demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:34:14.568-04:00  INFO 19664 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:34:14.571-04:00  INFO 19664 --- [JPA-Demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:34:14.572-04:00  INFO 19664 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-66 - Shutdown initiated...
+2025-10-31T00:34:14.580-04:00  INFO 19664 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-66 - Shutdown completed.
+2025-10-31T00:34:18.312-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 36124 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:34:18.314-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:34:18.366-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-31T00:34:18.366-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-31T00:34:19.188-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:34:19.247-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:34:19.852-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:34:19.870-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:34:19.871-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:34:19.927-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:34:19.928-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1561 ms
+2025-10-31T00:34:20.111-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:34:20.188-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-10-31T00:34:20.244-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:34:20.590-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:34:20.629-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-10-31T00:34:21.227-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1efedd25
+2025-10-31T00:34:21.231-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-10-31T00:34:21.384-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.34
@@ -24,14 +870,324 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-10-30T17:32:54.972-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-10-30T17:32:55.219-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-10-30T17:32:56.569-04:00  WARN 19664 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-10-30T17:32:57.836-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2025-10-30T17:32:57.937-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-10-30T17:32:57.962-04:00  INFO 19664 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 14.465 seconds (process running for 16.664)
-2025-10-30T17:32:58.323-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-30T17:32:58.324-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-30T17:32:58.326-04:00  INFO 19664 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-10-30T17:32:58.804-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-0] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<org.example.jpademo.dto.PokemonRegionDto> org.example.jpademo.controller.RegionController.addNewRegion(org.example.jpademo.dto.PokemonRegionDto) with 2 errors: [Field error in object 'pokemonRegionDto' on field 'population': rejected value [null]; codes [NotNull.pokemonRegionDto.population,NotNull.population,NotNull.java.lang.Integer,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonRegionDto.population,population]; arguments []; default message [population]]; default message [must not be null]] [Field error in object 'pokemonRegionDto' on field 'regionName': rejected value [null]; codes [NotBlank.pokemonRegionDto.regionName,NotBlank.regionName,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [pokemonRegionDto.regionName,regionName]; arguments []; default message [regionName]]; default message [must not be blank]] ]
-2025-10-30T17:50:04.519-04:00  WARN 19664 --- [JPA-Demo] [tomcat-handler-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2025-10-31T00:34:22.440-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:34:22.658-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:34:23.171-04:00  WARN 36124 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:34:23.601-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:34:23.633-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:34:23.642-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 5.837 seconds (process running for 8.24)
+2025-10-31T00:34:32.154-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:34:32.155-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:34:32.156-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:36:34.709-04:00  INFO 36124 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:36:34.714-04:00  INFO 36124 --- [JPA-Demo] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:36:34.726-04:00  INFO 36124 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:36:34.730-04:00  INFO 36124 --- [JPA-Demo] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:36:34.736-04:00  INFO 36124 --- [JPA-Demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-31T00:36:34.750-04:00  INFO 36124 --- [JPA-Demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-31T00:36:34.894-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 36124 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:36:34.895-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:36:35.450-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:36:35.462-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:36:35.546-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:36:35.547-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:36:35.548-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:36:35.569-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:36:35.569-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 672 ms
+2025-10-31T00:36:35.594-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:36:35.598-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:36:35.607-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:36:35.607-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-31T00:36:35.626-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3745fa24
+2025-10-31T00:36:35.626-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-31T00:36:35.628-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:36:35.706-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:36:35.762-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:36:35.940-04:00  WARN 36124 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:36:36.086-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:36:36.095-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:36:36.098-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.262 seconds (process running for 140.698)
+2025-10-31T00:36:36.100-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:36:41.548-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:36:41.548-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:36:41.550-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:36:44.570-04:00  INFO 36124 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:36:44.572-04:00  INFO 36124 --- [JPA-Demo] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:36:44.587-04:00  INFO 36124 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:36:44.591-04:00  INFO 36124 --- [JPA-Demo] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:36:44.592-04:00  INFO 36124 --- [JPA-Demo] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-31T00:36:44.620-04:00  INFO 36124 --- [JPA-Demo] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-31T00:36:44.732-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 36124 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:36:44.732-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:36:45.069-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:36:45.086-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:36:45.190-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:36:45.190-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:36:45.191-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:36:45.223-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:36:45.223-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 490 ms
+2025-10-31T00:36:45.264-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:36:45.266-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:36:45.273-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:36:45.273-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-31T00:36:45.298-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fb6d5a2
+2025-10-31T00:36:45.299-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-31T00:36:45.301-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:36:45.386-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:36:45.422-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:36:45.622-04:00  WARN 36124 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:36:45.912-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:36:45.929-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:36:45.934-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.236 seconds (process running for 150.534)
+2025-10-31T00:36:45.936-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:36:46.812-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:36:46.812-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:36:46.813-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T00:36:46.846-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: addNewPokemon()
+2025-10-31T00:36:46.897-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: addNewPokemon()
+2025-10-31T00:36:58.995-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-1] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:36:59.034-04:00 ERROR 36124 --- [JPA-Demo] [tomcat-handler-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.hibernate.LazyInitializationException: failed to lazily initialize a collection: could not initialize proxy - no Session] with root cause
+
+org.hibernate.LazyInitializationException: failed to lazily initialize a collection: could not initialize proxy - no Session
+	at org.hibernate.collection.spi.AbstractPersistentCollection.throwLazyInitializationException(AbstractPersistentCollection.java:635) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.withTemporarySessionIfNeeded(AbstractPersistentCollection.java:219) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.initialize(AbstractPersistentCollection.java:614) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.collection.spi.AbstractPersistentCollection.read(AbstractPersistentCollection.java:138) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at org.hibernate.collection.spi.PersistentBag.toArray(PersistentBag.java:375) ~[hibernate-core-6.6.29.Final.jar:6.6.29.Final]
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182) ~[na:na]
+	at org.example.jpademo.service.PokemonService.mapPokemonToDto(PokemonService.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.service.PokemonService$$SpringCGLIB$$0.mapPokemonToDto(<generated>) ~[classes/:na]
+	at org.example.jpademo.controller.PokemonController.deletePokemon(PokemonController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.aspect.PokemonAspect.logGetPokemon(PokemonAspect.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.controller.PokemonController$$SpringCGLIB$$0.deletePokemon(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:456) ~[na:na]
+
+2025-10-31T00:37:03.324-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-2] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:37:03.334-04:00 ERROR 36124 --- [JPA-Demo] [tomcat-handler-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.example.jpademo.exception.PokemonException: Pokemon Not Found] with root cause
+
+org.example.jpademo.exception.PokemonException: Pokemon Not Found
+	at org.example.jpademo.controller.PokemonController.lambda$deletePokemon$0(PokemonController.java:61) ~[classes/:na]
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403) ~[na:na]
+	at org.example.jpademo.controller.PokemonController.deletePokemon(PokemonController.java:61) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:360) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.aspect.PokemonAspect.logGetPokemon(PokemonAspect.java:78) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:649) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:631) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.11.jar:6.2.11]
+	at org.example.jpademo.controller.PokemonController$$SpringCGLIB$$0.deletePokemon(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:991) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:896) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:936) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:596) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.11.jar:6.2.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.46.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.11.jar:6.2.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1776) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.46.jar:10.1.46]
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:456) ~[na:na]
+
+2025-10-31T00:37:24.628-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Started called: addNewPokemon()
+2025-10-31T00:37:24.646-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-3] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: addNewPokemon()
+2025-10-31T00:37:24.840-04:00  INFO 36124 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-10-31T00:37:24.841-04:00  INFO 36124 --- [JPA-Demo] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:37:24.854-04:00  INFO 36124 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:37:24.859-04:00  INFO 36124 --- [JPA-Demo] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:37:24.861-04:00  INFO 36124 --- [JPA-Demo] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-31T00:37:24.891-04:00  INFO 36124 --- [JPA-Demo] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-10-31T00:37:25.022-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 36124 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:37:25.022-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:37:25.334-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:37:25.374-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:37:25.515-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:37:25.517-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:37:25.517-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:37:25.561-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:37:25.561-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 537 ms
+2025-10-31T00:37:25.626-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:37:25.631-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:37:25.643-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:37:25.646-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-31T00:37:25.673-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b410fd4
+2025-10-31T00:37:25.674-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-31T00:37:25.676-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:37:25.781-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:37:25.826-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:37:25.955-04:00  WARN 36124 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:37:26.156-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:37:26.175-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:37:26.180-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.202 seconds (process running for 190.779)
+2025-10-31T00:37:26.182-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:37:27.329-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:37:27.329-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:37:27.331-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-31T00:37:27.586-04:00  INFO 36124 --- [JPA-Demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-10-31T00:37:27.587-04:00  INFO 36124 --- [JPA-Demo] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T00:37:27.592-04:00  INFO 36124 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T00:37:27.593-04:00  INFO 36124 --- [JPA-Demo] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:37:27.595-04:00  INFO 36124 --- [JPA-Demo] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-31T00:37:27.601-04:00  INFO 36124 --- [JPA-Demo] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-10-31T00:37:27.677-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Starting JpaDemoApplication using Java 25 with PID 36124 (C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo\target\classes started by murta in C:\Users\murta\Dropbox\PC\Downloads\College Course Books & Materials\Java\JPA-Demo)
+2025-10-31T00:37:27.677-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-10-31T00:37:27.865-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T00:37:27.883-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 2 JPA repository interfaces.
+2025-10-31T00:37:27.982-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-10-31T00:37:27.983-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T00:37:27.983-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-10-31T00:37:28.002-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T00:37:28.002-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 323 ms
+2025-10-31T00:37:28.035-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T00:37:28.038-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T00:37:28.049-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T00:37:28.050-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-10-31T00:37:28.069-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48127960
+2025-10-31T00:37:28.069-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-10-31T00:37:28.071-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T00:37:28.165-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T00:37:28.198-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T00:37:28.302-04:00  WARN 36124 --- [JPA-Demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T00:37:28.463-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T00:37:28.473-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-10-31T00:37:28.477-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 0.826 seconds (process running for 193.076)
+2025-10-31T00:37:28.478-04:00  INFO 36124 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T00:37:29.402-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T00:37:29.402-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T00:37:29.403-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-10-31T00:37:29.407-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Started called: deletePokemon()
+2025-10-31T00:37:29.431-04:00  INFO 36124 --- [JPA-Demo] [tomcat-handler-0] o.example.jpademo.aspect.PokemonAspect   : Method Ended called: deletePokemon()

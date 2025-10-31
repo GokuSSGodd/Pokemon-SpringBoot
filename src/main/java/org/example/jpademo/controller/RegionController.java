@@ -1,12 +1,12 @@
 package org.example.jpademo.controller;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonRegionDto;
 import org.example.jpademo.exception.PokemonRegionException;
-import org.example.jpademo.repository.PokemonRegionRepository;
 import org.example.jpademo.service.PokemonRegionService;
-import org.example.jpademo.service.PokemonService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,31 +17,25 @@ import org.springframework.web.bind.annotation.*;
  * It is designed for RESTful web services & API development
  **/
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/region")
 public class RegionController {
     private final PokemonRegionService pokemonRegionService;
-    private final PokemonRegionRepository pokemonRegionRepository;
-    private final PokemonService pokemonService;
-
-    public RegionController(PokemonRegionService pokemonRegionService, PokemonRegionRepository pokemonRegionRepository, PokemonService pokemonService) {
-        this.pokemonRegionService = pokemonRegionService;
-        this.pokemonRegionRepository = pokemonRegionRepository;
-        this.pokemonService = pokemonService;
-    }
 
     @PostMapping("/add")
     public ResponseEntity<PokemonRegionDto> addNewRegion(@Valid @RequestBody PokemonRegionDto pokemonRegionDto) {
         PokemonRegion pokemonRegion = pokemonRegionService.createNewPokemonRegion(pokemonRegionDto);
         pokemonRegionService.savePokemonRegion(pokemonRegion);
-        return ResponseEntity.ok().body(pokemonRegionDto);
+        return ResponseEntity.status(HttpStatus.CREATED).body(pokemonRegionDto);
     }
 
     @DeleteMapping("/delete")
-    public ResponseEntity<PokemonRegionDto> deletePokemonRegion(@RequestParam PokemonRegionDto pokemonRegionDto) {
-        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonRegionDto.regionName());
+    public ResponseEntity<PokemonRegionDto> deletePokemonRegion(@RequestParam String name) {
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
+        var pokemonRegionDto = pokemonRegionService.mapPokemonRegionToDto(pokemonRegion);
         pokemonRegionService.deletePokemonRegion(pokemonRegion);
-        return ResponseEntity.ok().body(pokemonRegionDto);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(pokemonRegionDto);
     }
 
 
