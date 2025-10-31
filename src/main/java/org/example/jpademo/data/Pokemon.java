@@ -19,6 +19,7 @@ public class Pokemon {
     private String name;
     private Integer level;
     private String ability;
+    @ElementCollection(targetClass = PokemonType.class)
     @Enumerated(EnumType.STRING)
     @Column(name = "type")
     private List<PokemonType> pokemonTypeList;

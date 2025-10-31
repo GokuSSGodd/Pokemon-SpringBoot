@@ -1,11 +1,16 @@
 package org.example.jpademo.controller;
 
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
+import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.example.jpademo.service.PokemonService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -16,50 +21,46 @@ import org.springframework.web.bind.annotation.*;
  **/
 @Slf4j
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/pokemon")
 public class PokemonController{
     private final PokemonRegionService pokemonRegionService;
     private final PokemonService pokemonService;
 
-    public PokemonController(PokemonRegionService pokemonRegionService, PokemonService pokemonService) {
-        this.pokemonRegionService = pokemonRegionService;
-        this.pokemonService = pokemonService;
-    }
-
     @PostMapping("/add")
-    public String addNewPokemon(@RequestBody PokemonDto pokemonDto){
-        var pokeRegion = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
-        Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokeRegion);
+    public ResponseEntity<PokemonDto> addNewPokemon(@Valid @RequestBody PokemonDto pokemonDto){
+        var pokeRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonDto.regionName());
+        var pokemonRegion = pokeRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
+        Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);
-        return pokemon.getName() + " was added successfully to " + pokeRegion.get().getName() + " region!";
+        return ResponseEntity.status(HttpStatus.CREATED).body(pokemonDto);
     }
 
     @PutMapping("/update")
-    public String updatePokemon(@RequestBody PokemonDto pokemonDto) {
-            var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
-            var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
-            var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByDto(pokemonDto);
-            pokemonService.updatePokemon(pokemonDto,pokemon,pokemonRegionOptional);
-            pokemonService.savePokemon(pokemon);
-            return pokemon.getName() + " was successfully updated!";
+    public ResponseEntity<PokemonDto>  updatePokemon(@Valid @RequestBody PokemonDto pokemonDto) {
+        var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
+        var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+        var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonDto.regionName());
+        pokemonService.updatePokemon(pokemonDto,pokemon,pokemonRegionOptional);
+        pokemonService.savePokemon(pokemon);
+        return ResponseEntity.status(HttpStatus.OK).body(pokemonDto);
     }
 
     @GetMapping("/get")
-    public Pokemon getPokemon(@RequestParam String name){
+    public ResponseEntity<PokemonDto> getPokemon(@RequestParam String name) {
         var pokemonOptional = pokemonService.findPokemonByName(name);
         var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+        var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
         log.info("Pokemon received Successfully");
-        return pokemon;
+        return ResponseEntity.status(HttpStatus.OK).body(pokemonDto);
     }
 
     @DeleteMapping("/delete")
-    public String deletePokemon(@RequestParam String name){
+    public ResponseEntity<PokemonDto> deletePokemon(@RequestParam String name){
        var pokemonOptional = pokemonService.findPokemonByName(name);
        var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
-       pokemonService.deletePokemonByName(pokemon);
-       return pokemon.getName() + " was successfully deleted!";
+       var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
+       pokemonService.deletePokemon(pokemon);
+       return ResponseEntity.status(HttpStatus.NO_CONTENT).body(pokemonDto);
     }
-
-
-
 }

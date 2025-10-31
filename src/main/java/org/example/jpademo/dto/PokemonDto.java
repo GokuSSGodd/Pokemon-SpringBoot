@@ -1,5 +1,7 @@
 package org.example.jpademo.dto;
 
+import jakarta.validation.constraints.*;
+import lombok.Builder;
 import org.example.jpademo.data.PokemonType;
 import java.util.List;
 
@@ -10,11 +12,16 @@ import java.util.List;
  * to the Pokemon using its region you would do that with this
  * Also adds a layer of security to the application
  **/
+@Builder
 public record PokemonDto (
+        @NotBlank
         String name,
+        @NotNull @Min(5) @Max(100)
         Integer level,
+        @NotBlank
         String ability,
+        @NotEmpty
         List<PokemonType> pokemonTypeList,
-        String regionName,
-        Integer regionId
+        @NotBlank
+        String regionName
 ) {}
