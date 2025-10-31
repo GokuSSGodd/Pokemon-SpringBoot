@@ -8,7 +8,6 @@ import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.repository.PokemonRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.*;
 
 /**

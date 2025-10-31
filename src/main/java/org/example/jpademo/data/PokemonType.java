@@ -1,5 +1,8 @@
 package org.example.jpademo.data;
 
+/**
+ * An Enums class for the different Pokemon types
+ */
 public enum PokemonType {
     FIRE,
     WATER,
