@@ -4,7 +4,6 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonRegionDto;
-import org.example.jpademo.exception.PokemonRegionException;
 import org.example.jpademo.exception.PokemonRegionNameNotFoundException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.springframework.http.HttpStatus;
