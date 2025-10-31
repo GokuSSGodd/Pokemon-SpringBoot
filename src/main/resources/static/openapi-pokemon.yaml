@@ -3,4 +3,74 @@ info:
   title: Title
   description: Title
   version: 1.0.0
+  contact:
+    name: Murtaza Amjad
+    email: murtazaamjad0519@gmail.com
+    url: https://murtaza-amjad-personal-website.vercel.app/
+
+paths:
+  /pokemon/add:
+    post:
+      summary: API to add new Pokemon
+      description: 'The API requires the clien to add a new Pokemon 
+      using the name, level, ability, type, and regionName'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PokemonDto'
+
   
+
+components:
+  schemas:
+    PokemonDto:
+      type: object
+      properties:
+        name:
+          type: string
+          example: Charmander
+        level:
+          type: integer
+          example: 5
+        ability:
+          type: string
+          example: Blaze
+        pokemonTypes:
+          type: array
+          items:
+            $ref: "#/components/schemas/PokemonType"
+          example:
+            - FIRE
+        regionName:
+          type: string
+          example: Kanto
+        regionId:
+          type: integer
+          example: 1
+    PokemonType:
+      type: string
+      description: "Available Pokemon types"
+      enums:
+        - FIRE
+        - WATER
+        - GRASS
+        - NORMAL
+        - ELECTRIC
+        - FLYING
+        - FIGHTING
+        - POISON
+        - GROUND
+        - PSYCHIC
+        - ROCK
+        - ICE
+        - BUG
+        - DRAGON
+        - GHOST
+        - DARK
+        - STEEL
+        - FAIRY
+        - STELLAR
+
+

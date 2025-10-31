@@ -53,6 +53,7 @@ components:
         population:
           type: integer
           example: 100
+
   examples:
     EmptyRegionExample:
       value:
