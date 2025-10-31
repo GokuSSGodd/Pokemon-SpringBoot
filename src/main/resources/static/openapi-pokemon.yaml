@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: Title
-  description: Title
+  title: Pokemon API
+  description: Pokemon API allows you to manipulate data from the Pokemon database
   version: 1.0.0
   contact:
     name: Murtaza Amjad

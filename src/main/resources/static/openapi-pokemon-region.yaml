@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Pokemon Region API
-  description: Pokemon Region API allows you to manipulate data from the Pokemon Region
+  description: Pokemon Region API allows you to manipulate data from the Pokemon Region database
   version: 1.0.0
   contact:
     name: Murtaza Amjad
@@ -41,6 +41,35 @@ paths:
                   $ref: "#/components/examples/EmptyRegionExample"
                 example-2:
                   $ref: "#/components/examples/MinimumPopulationExample"
+  /region/delete/:
+    delete:
+      summary: API to delete a Pokemon Region
+      description: The API requires the client to delete a Pokemon Region using name
+      parameters:
+        - in: query
+          schema:
+            type: string
+      responses:
+        200:
+          description: 'Pokemon Region was successfully added'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PokemonRegionDTO"
+              examples:
+                example-1:
+                  $ref: "#/components/schemas/PokemonRegionDTO"
+        400:
+          description: 'Pokemon Region validation empty exception'
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PokemonRegionDTO"
+              examples:
+                example-1:
+                  $ref: "#/components/examples/EmptyRegionExample"
+                example-2:
+                  $ref: "#/components/examples/MinimumPopulationExample"
 
 components:
   schemas:
@@ -53,7 +82,6 @@ components:
         population:
           type: integer
           example: 100
-
   examples:
     EmptyRegionExample:
       value:
