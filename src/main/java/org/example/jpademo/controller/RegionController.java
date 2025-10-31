@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonRegionDto;
 import org.example.jpademo.exception.PokemonRegionException;
+import org.example.jpademo.exception.PokemonRegionNameNotFoundException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,12 +33,9 @@ public class RegionController {
     @DeleteMapping("/delete")
     public ResponseEntity<PokemonRegionDto> deletePokemonRegion(@RequestParam String name) {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
-        var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
+        var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionNameNotFoundException(name));
         var pokemonRegionDto = pokemonRegionService.mapPokemonRegionToDto(pokemonRegion);
         pokemonRegionService.deletePokemonRegion(pokemonRegion);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).body(pokemonRegionDto);
     }
-
-
-
 }

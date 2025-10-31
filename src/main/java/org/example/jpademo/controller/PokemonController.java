@@ -6,7 +6,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.example.jpademo.dto.PokemonDto;
 import org.example.jpademo.data.Pokemon;
 import org.example.jpademo.exception.PokemonException;
+import org.example.jpademo.exception.PokemonNameNotFoundException;
 import org.example.jpademo.exception.PokemonRegionException;
+import org.example.jpademo.exception.PokemonRegionNameNotFoundException;
 import org.example.jpademo.service.PokemonRegionService;
 import org.example.jpademo.service.PokemonService;
 import org.springframework.http.HttpStatus;
@@ -30,7 +32,7 @@ public class PokemonController{
     @PostMapping("/add")
     public ResponseEntity<PokemonDto> addNewPokemon(@Valid @RequestBody PokemonDto pokemonDto){
         var pokeRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonDto.regionName());
-        var pokemonRegion = pokeRegionOptional.orElseThrow(() -> new PokemonRegionException("Pokemon Region Not Found"));
+        var pokemonRegion = pokeRegionOptional.orElseThrow(() -> new PokemonRegionNameNotFoundException(pokemonDto.regionName()));
         Pokemon pokemon = pokemonService.createPokemon(pokemonDto, pokemonRegion);
         pokemonService.savePokemon(pokemon);
         return ResponseEntity.status(HttpStatus.CREATED).body(pokemonDto);
@@ -39,7 +41,7 @@ public class PokemonController{
     @PutMapping("/update")
     public ResponseEntity<PokemonDto>  updatePokemon(@Valid @RequestBody PokemonDto pokemonDto) {
         var pokemonOptional = pokemonService.findPokemonByName(pokemonDto.name());
-        var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+        var pokemon =  pokemonOptional.orElseThrow(() -> new PokemonNameNotFoundException(pokemonDto.name()));
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(pokemonDto.regionName());
         pokemonService.updatePokemon(pokemonDto,pokemon,pokemonRegionOptional);
         pokemonService.savePokemon(pokemon);
@@ -49,7 +51,7 @@ public class PokemonController{
     @GetMapping("/get")
     public ResponseEntity<PokemonDto> getPokemon(@RequestParam String name) {
         var pokemonOptional = pokemonService.findPokemonByName(name);
-        var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+        var pokemon = pokemonOptional.orElseThrow(() -> new PokemonNameNotFoundException(name));
         var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
         log.info("Pokemon received Successfully");
         return ResponseEntity.status(HttpStatus.OK).body(pokemonDto);
@@ -58,7 +60,7 @@ public class PokemonController{
     @DeleteMapping("/delete")
     public ResponseEntity<PokemonDto> deletePokemon(@RequestParam String name){
        var pokemonOptional = pokemonService.findPokemonByName(name);
-       var pokemon = pokemonOptional.orElseThrow(() -> new PokemonException("Pokemon Not Found"));
+       var pokemon = pokemonOptional.orElseThrow(() -> new PokemonNameNotFoundException(name));
        var pokemonDto = pokemonService.mapPokemonToDto(pokemon);
        pokemonService.deletePokemon(pokemon);
        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(pokemonDto);
