@@ -46,6 +46,7 @@ paths:
       summary: API to delete a Pokemon Region
       description: The API requires the client to delete a Pokemon Region using name
       parameters:
+        - name:
         - in: query
           schema:
             type: string

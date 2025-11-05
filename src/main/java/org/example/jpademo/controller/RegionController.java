@@ -2,6 +2,8 @@ package org.example.jpademo.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.flogger.Flogger;
+import lombok.extern.slf4j.Slf4j;
 import org.example.jpademo.data.PokemonRegion;
 import org.example.jpademo.dto.PokemonRegionDto;
 import org.example.jpademo.exception.PokemonRegionNameNotFoundException;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
  * RestController = Controller + ResponseBody
  * It is designed for RESTful web services & API development
  **/
+@Slf4j
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/region")
@@ -30,11 +33,12 @@ public class RegionController {
     }
 
     @DeleteMapping("/delete")
-    public ResponseEntity<PokemonRegionDto> deletePokemonRegion(@RequestParam String name) {
+    public ResponseEntity<Void> deletePokemonRegion(@RequestParam String name) {
         var pokemonRegionOptional = pokemonRegionService.getPokemonRegionByName(name);
         var pokemonRegion = pokemonRegionOptional.orElseThrow(() -> new PokemonRegionNameNotFoundException(name));
         var pokemonRegionDto = pokemonRegionService.mapPokemonRegionToDto(pokemonRegion);
         pokemonRegionService.deletePokemonRegion(pokemonRegion);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(pokemonRegionDto);
+        log.info(String.valueOf(pokemonRegionDto));
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
 }
