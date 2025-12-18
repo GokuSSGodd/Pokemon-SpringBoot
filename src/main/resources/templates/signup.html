@@ -109,13 +109,32 @@
     <div th:if="${error}" class="msg" th:text="${error}"></div>
     <div th:if="${success}" class="msg success" th:text="${success}"></div>
 
-    <form th:action="@{/signup}" method="post">
-        <input type="text" name="username" placeholder="Trainer Name" required />
-        <input type="email" name="email" placeholder="PokÃ©Mail" required />
-        <input type="password" name="password" placeholder="Secret Key" required />
-        <input type="password" name="confirmPassword" placeholder="Confirm Secret Key" required />
+    <form id="signupForm">
+        <input type="text" id="username" placeholder="Trainer Name" required />
+        <input type="email" id="email" placeholder="PokÃ©Mail" required />
+        <input type="password" id="password" placeholder="Secret Key" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm Secret Key" required />
         <input type="submit" value="Create Trainer" />
     </form>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            fetch("http://localhost:8080/signup", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: document.getElementById("username").value,
+                    email: document.getElementById("email").value,
+                    password: document.getElementById("password").value,
+                    confirmPassword: document.getElementById("confirmPassword").value
+                })
+            });
+        });
+    </script>
 </div>
 
 </body>
