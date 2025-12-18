@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 
+    @GetMapping("/")
+    public String getHomePage(){
+        return "home";
+    }
+
     @GetMapping("/login")
     public String getLoginPage() {
         return "login";
@@ -16,4 +21,10 @@ public class HomeController {
     public String getLogoutPage() {
         return "logout";
     }
+
+    @GetMapping("/signup")
+    public String getSignupPage() { return "signup"; }
+
+
+
 }

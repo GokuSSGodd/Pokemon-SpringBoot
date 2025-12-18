@@ -1066,3 +1066,8 @@ Unconditional classes:
 
 
 2025-11-13T18:56:43.255-05:00  WARN 11304 --- [JPA-Demo] [HikariPool-7:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Thread starvation or clock leap detected (housekeeper delta=54m33s819ms454µs800ns).
+2025-11-13T19:06:42.422-05:00  INFO 11304 --- [JPA-Demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-13T19:06:42.434-05:00  INFO 11304 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-13T19:06:42.441-05:00  INFO 11304 --- [JPA-Demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T19:06:42.447-05:00  INFO 11304 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-11-13T19:06:42.454-05:00  INFO 11304 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
