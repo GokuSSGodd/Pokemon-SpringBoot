@@ -13,7 +13,6 @@ public class JDBCUserService {
 
     private final JdbcUserDetailsManager jdbcUserDetailManager;
     private final PasswordEncoder passwordEncoder;
-    private final RestClient.Builder builder;
 
     public boolean userExists(String username){
         return jdbcUserDetailManager.userExists(username);
