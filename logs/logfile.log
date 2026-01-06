@@ -896,3 +896,8 @@ Consider defining a bean of type 'org.springframework.security.provisioning.Jdbc
 2025-12-30T19:10:49.699-05:00  INFO 32752 --- [JPA-Demo] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-12-30T19:10:49.704-05:00  INFO 32752 --- [JPA-Demo] [restartedMain] org.example.jpademo.JpaDemoApplication   : Started JpaDemoApplication in 1.12 seconds (process running for 2692.006)
 2025-12-30T19:10:49.705-05:00  INFO 32752 --- [JPA-Demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-12-30T20:01:59.386-05:00  INFO 32752 --- [JPA-Demo] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-12-30T20:01:59.391-05:00  INFO 32752 --- [JPA-Demo] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-12-30T20:01:59.396-05:00  INFO 32752 --- [JPA-Demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-12-30T20:01:59.397-05:00  INFO 32752 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-12-30T20:01:59.403-05:00  INFO 32752 --- [JPA-Demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
